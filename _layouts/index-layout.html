@@ -9,7 +9,13 @@
 
 <h1>Hello!</h1>
 <p>{{page.description}}</p>
-<a href="{{site.baseurl}}/contact">To Contacts</a>
 
+{% if {{site.baseurl}} %}
+<a href="/{{site.baseurl}}/contact">To Contacts</a>
+
+{% else %}
+
+<a href="/contact">To Contacts</a>
+{% endif %}
 </body>
 </html>
