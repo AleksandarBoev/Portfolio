@@ -1,0 +1,11 @@
+@import "https://fonts.googleapis.com/css?family=Raleway&display=swap";
+
+:root {
+    --color-background-secondary: rgb(45, 80, 130);
+    --color-text-secondary: white;
+    --color-orange: rgb(199, 44, 33);
+
+    --font-family-main: 'Verdana', sans-serif;;
+    --font-family-heading: 'Raleway', sans-serif
+
+}

@@ -1,0 +1,27 @@
+<header>
+    <h1>{{ page.header-title }}</h1>
+    {% if {{page.header-information}} %}
+    <p>{{page.header-information}}</p>
+    {% endif %}
+
+    <nav class="navbar">
+
+        <ul>
+            {% if {{site.baseurl}} %} <!--for GithubPages-->
+
+            <li><a href="/{{site.baseurl}}/">About Me</a></li>
+            <li><a href="/{{site.baseurl}}/certifications">Certifications</a></li>
+            <li><a href="/{{site.baseurl}}/projects">Projects</a></li>
+            <li><a href="/{{site.baseurl}}/contact-me">Contact Me</a></li>
+
+            {% else %} <!--for local-->
+
+            <li><a href="/">About Me</a></li>
+            <li><a href="/certifications">Certifications</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/contact-me">Contact Me</a></li>
+
+            {% endif %}
+        </ul>
+    </nav>
+</header>

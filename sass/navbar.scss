@@ -1,0 +1,29 @@
+.navbar {
+  color: var(--color-text-secondary);
+  background-color: var(--color-background-secondary);
+  display: flex;
+
+  ul {
+    flex-basis: 75%;
+    display: flex;
+    list-style: none;
+  }
+
+  li {
+    padding: 0.5em 0.75em;
+    display: inline-block;
+    transition: background-color 0.5s;
+    border-radius: 0.5em;
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  li:hover {
+    background-color: var(--color-orange);
+  }
+
+}
