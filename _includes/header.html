@@ -1,27 +1,26 @@
 <header>
-    <h1>{{ page.header-title }}</h1>
-    {% if {{page.header-information}} %}
-    <p>{{page.header-information}}</p>
+    {% if {{page.header-title}} %}
+    <h1>{{page.header-title}}</h1>
     {% endif %}
 
+    {%- if {{site.baseurl}} -%}
+        {%- capture url_start -%}/{{site.baseurl}}{%- endcapture -%}
+    {%- endif -%}
+
     <nav class="navbar">
-
         <ul>
-            {% if {{site.baseurl}} %} <!--for GithubPages-->
-
-            <li><a href="/{{site.baseurl}}/">About Me</a></li>
-            <li><a href="/{{site.baseurl}}/certifications">Certifications</a></li>
-            <li><a href="/{{site.baseurl}}/projects">Projects</a></li>
-            <li><a href="/{{site.baseurl}}/contact-me">Contact Me</a></li>
-
-            {% else %} <!--for local-->
-
-            <li><a href="/">About Me</a></li>
-            <li><a href="/certifications">Certifications</a></li>
-            <li><a href="/projects">Projects</a></li>
-            <li><a href="/contact-me">Contact Me</a></li>
-
-            {% endif %}
+            <li class="{% if page.permalink == '/' %}selected{% endif %}">
+                <a href="{{url_start}}/">About Me</a>
+            </li>
+            <li class="{% if page.permalink == '2' %}selected{% endif %}">
+                <a href="{{url_start}}/certifications">Certifications</a>
+            </li>
+            <li class="{% if page.permalink == '3' %}selected{% endif %}">
+                <a href="{{url_start}}/projects">Projects</a>
+            </li>
+            <li class="{% if page.permalink == '/contact-me' %}selected{% endif %}">
+                <a href="{{url_start}}/contact-me">Contact Me</a>
+            </li>
         </ul>
     </nav>
 </header>

@@ -1,0 +1,21 @@
+:root {
+  --size: 3rem; }
+
+.contacts {
+  background-color: gray;
+  display: flex;
+  justify-content: center; }
+  .contacts > * {
+    margin: 2rem;
+    position: relative;
+    height: var(--size);
+    width: var(--size); }
+  .contacts i {
+    font-size: var(--size) !important;
+    transition: font-size 0.5s; }
+  .contacts a:hover i {
+    font-size: calc(var(--size) + 1rem) !important; }
+  .contacts a {
+    position: absolute;
+    text-decoration: none;
+    color: white; }

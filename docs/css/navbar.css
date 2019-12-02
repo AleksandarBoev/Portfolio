@@ -1,6 +1,6 @@
 .navbar {
   color: var(--color-text-secondary);
-  background-color: var(--color-background-secondary);
+  background-color: #0069d9;
   display: flex; }
   .navbar ul {
     flex-basis: 75%;
@@ -9,11 +9,12 @@
   .navbar li {
     padding: 0.5em 0.75em;
     display: inline-block;
-    transition: background-color 0.5s;
-    border-radius: 0.5em; }
+    transition: background-color 0.5s; }
   .navbar a {
     display: block;
     text-decoration: none;
     color: inherit; }
   .navbar li:hover {
-    background-color: var(--color-orange); }
+    background-color: #0096e6; }
+  .navbar .selected {
+    background-color: #0096e6; }

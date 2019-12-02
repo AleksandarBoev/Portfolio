@@ -24,7 +24,8 @@ title: 'Portfolio'
 author: 'Aleksandar Boev'
 email: 'aleksandarboev95@gmail.com'
 github: 'https://github.com/AleksandarBoev'
-linkedin: 'www.linkedin.com/in/aleksandar-boev-9a6345158'
+linkedin: 'https://www.linkedin.com/in/aleksandar-boev-9a6345158/'
+testing: wat
 # Build settings
 destination: docs
 plugins:

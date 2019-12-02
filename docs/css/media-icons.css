@@ -1,8 +1,0 @@
-i {
-    font-size: 3em !important;
-    transition: font-size 0.5s;
-}
-
-i:hover {
-    font-size: 5em !important;
-}
