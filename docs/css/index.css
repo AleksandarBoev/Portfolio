@@ -1,21 +1,55 @@
 :root {
   --size: 3rem; }
 
-.contacts {
-  background-color: gray;
+.about-me {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #323232;
+  color: #d2d2d2; }
+  .about-me .about-me-image-container {
+    margin: 0 auto;
+    width: 8rem;
+    border-radius: 50%;
+    overflow: hidden; }
+    .about-me .about-me-image-container img {
+      display: block;
+      width: 100%; }
+  .about-me p {
+    max-width: 35em; }
+
+.about-me-social {
+  width: 100%;
+  display: grid;
+  grid-template-areas: 'heading heading' 'email email' 'github linkedin';
+  color: orange;
   justify-content: center; }
-  .contacts > * {
+  .about-me-social > h2 {
+    grid-area: heading;
+    text-align: center; }
+  .about-me-social .email {
+    grid-area: email;
+    text-align: center; }
+    .about-me-social .email i {
+      font-size: 1.5rem !important; }
+    .about-me-social .email p {
+      display: inline-block;
+      margin-left: 1.1em; }
+  .about-me-social .github {
+    grid-area: github; }
+  .about-me-social .linkedin {
+    grid-area: linkedin; }
+  .about-me-social .github, .about-me-social .linkedin {
     margin: 2rem;
     position: relative;
     height: var(--size);
     width: var(--size); }
-  .contacts i {
+  .about-me-social i {
     font-size: var(--size) !important;
     transition: font-size 0.5s; }
-  .contacts a:hover i {
+  .about-me-social a:hover i {
     font-size: calc(var(--size) + 1rem) !important; }
-  .contacts a {
+  .about-me-social a {
     position: absolute;
     text-decoration: none;
-    color: white; }
+    color: inherit; }

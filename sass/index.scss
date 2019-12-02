@@ -2,12 +2,69 @@
   --size: 3rem;
 }
 
-.contacts {
-  background-color: gray;
+.about-me {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: rgb(50, 50, 50);
+  color: rgb(210, 210, 210);
+
+  .about-me-image-container {
+    margin: 0 auto;
+    width: 8rem;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  p {
+    max-width: 35em;
+  }
+}
+
+.about-me-social {
+  width: 100%;
+  display: grid;
+  grid-template-areas:
+          'heading heading'
+          'email email'
+          'github linkedin';
+  color: orange;
   justify-content: center;
 
-  > * {
+  > h2 {
+    grid-area: heading;
+    text-align: center;
+  }
+
+  .email {
+    grid-area: email;
+    text-align: center;
+
+    i {
+      font-size: 1.5rem !important;
+    }
+
+    p {
+      display: inline-block;
+      margin-left: 1.1em;
+    }
+  }
+
+ .github {
+   grid-area: github;
+ }
+
+  .linkedin {
+    grid-area: linkedin;
+  }
+
+  .github, .linkedin {
     margin: 2rem;
     position: relative;
     height: var(--size);
@@ -26,6 +83,6 @@
   a {
     position: absolute;
     text-decoration: none;
-    color: white;
+    color: inherit;
   }
 }

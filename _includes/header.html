@@ -1,8 +1,4 @@
 <header>
-    {% if {{page.header-title}} %}
-    <h1>{{page.header-title}}</h1>
-    {% endif %}
-
     {%- if {{site.baseurl}} -%}
         {%- capture url_start -%}/{{site.baseurl}}{%- endcapture -%}
     {%- endif -%}

@@ -1,11 +1,13 @@
 html {
     font-family: var(--font-family-main);
-    font-size: 20px;
-    line-height: 1.2em;
+    font-size: 18px;
+    line-height: 1.4em;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-family-heading);
     line-height: 1.2;
     font-weight: bold;
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
 }
