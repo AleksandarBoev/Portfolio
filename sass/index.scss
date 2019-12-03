@@ -37,6 +37,34 @@
   color: orange;
   justify-content: center;
 
+  input, button {
+    border: none;
+    display: inline-block;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 0;
+    width: auto !important;
+    background-color: inherit;
+    color: inherit;
+    cursor: pointer;
+  }
+
+  input {
+    margin-left: 1em;
+    text-shadow: inherit;
+    width: 16em !important;
+  }
+
+  button {
+    //transition: color 0.5s;
+    transition: box-shadow 1s;
+  }
+
+  button:hover {
+    //color: rgb(220, 130, 0);
+    box-shadow: 0 0.2em;
+  }
+
   > h2 {
     grid-area: heading;
     text-align: center;

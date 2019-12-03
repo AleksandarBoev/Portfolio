@@ -17,15 +17,15 @@
     <section class="about-me">
         <header>
             <div class="about-me-image-container">
-                <img src="../images/me2.jpg">
+                <img src="./images/me2.jpg">
             </div>
             <h1>{{page.header-title}}</h1>
-            <p>Hello, my name is Aleksandar and I study programming. My interests are primarily in back-end development with Java. I am also interested in web programming and web technologies.</p>
+            <p>Hello, my name is Aleksandar and I study programming. I live in Sofia, Bulgaria and my interests are primarily in back-end development with Java. I am also interested in web programming and web technologies.</p>
         </header>
         <section class="about-me-social">
             <h2>Get in touch</h2>
             <div class="email">
-                <i class="fa fa-envelope"></i><p>{{site.email}}</p>
+                <button><i class="fa fa-envelope"></i><input value="{{site.email}}"/></button>
             </div>
             <div class="github">
                 <a target="_blank" href="{{site.github}}"><i class="fa fa-github"></i></a>
@@ -38,14 +38,14 @@
 </main>
 
 <script>
-    const emailDiv = document.getElementsByClassName('email')[0];
+    const emailInput = document.getElementsByTagName('input')[0];
+    const button = document.getElementsByTagName('button')[0];
 
-    const newInputElement = document.createElement('input');
-
-    emailDiv.addEventListener('click', () => {
-        newInputElement.value = document.querySelector('.email p').textContent;
-        newInputElement.select();
+    button.addEventListener('click', () => {
+        emailInput.select();
         document.execCommand('copy');
+        window.alert('Email address copied');
+        window.getSelection().removeAllRanges(); //TODO this doesn't work when using window.alert
     });
 </script>
 </body>

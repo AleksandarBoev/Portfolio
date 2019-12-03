@@ -24,6 +24,24 @@
   grid-template-areas: 'heading heading' 'email email' 'github linkedin';
   color: orange;
   justify-content: center; }
+  .about-me-social input, .about-me-social button {
+    border: none;
+    display: inline-block;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 0;
+    width: auto !important;
+    background-color: inherit;
+    color: inherit;
+    cursor: pointer; }
+  .about-me-social input {
+    margin-left: 1em;
+    text-shadow: inherit;
+    width: 16em !important; }
+  .about-me-social button {
+    transition: box-shadow 1s; }
+  .about-me-social button:hover {
+    box-shadow: 0 0.2em; }
   .about-me-social > h2 {
     grid-area: heading;
     text-align: center; }
