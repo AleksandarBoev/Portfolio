@@ -2,7 +2,13 @@
   --size: 3rem;
 }
 
+img {
+  display: block;
+  width: 100%;
+}
+
 .about-me {
+  padding-top: 2em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,11 +21,6 @@
     width: 8rem;
     border-radius: 50%;
     overflow: hidden;
-
-    img {
-      display: block;
-      width: 100%;
-    }
   }
 
   p {
@@ -30,10 +31,7 @@
 .about-me-social {
   width: 100%;
   display: grid;
-  grid-template-areas:
-          'heading heading'
-          'email email'
-          'github linkedin';
+  grid-template-areas: 'heading heading' 'email email' 'github linkedin';
   color: orange;
   justify-content: center;
 
@@ -73,20 +71,24 @@
   .email {
     grid-area: email;
     text-align: center;
+    position: relative;
 
     i {
       font-size: 1.5rem !important;
     }
 
     p {
-      display: inline-block;
-      margin-left: 1.1em;
+      opacity: 0;
+      position: absolute;
+      bottom: 0;
+      left: 20em;
+      transition: opacity 0.75s;
     }
   }
 
- .github {
-   grid-area: github;
- }
+  .github {
+    grid-area: github;
+  }
 
   .linkedin {
     grid-area: linkedin;
@@ -104,7 +106,7 @@
     transition: font-size 0.5s;
   }
 
-  a:hover i{
+  a:hover i {
     font-size: calc(var(--size) + 1rem) !important;
   }
 
@@ -112,5 +114,81 @@
     position: absolute;
     text-decoration: none;
     color: inherit;
+  }
+}
+
+.education-section {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  > * {
+    margin-top: 3em;
+  }
+
+  .education-softuni {
+    background-image: url(../images/softuni-me.jpg);
+  }
+
+  .education-tu {
+    background-image: url(../images/tu.jpg);
+  }
+
+  .box {
+    width: var(--education-box-width);
+    height: var(--education-box-height);
+    display: inline-block;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .box:before {
+    content: ' ';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(110, 110, 110, 0.6);
+  }
+
+  h3 {
+    color: white;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  > section {
+    width: var(--education-section-width);
+    text-align: center;
+    position: relative;
+  }
+
+  > section > div {
+    transition: transform 0.5s;
+  }
+
+  p {
+    opacity: 0;
+    position: absolute;
+    top: 10%;
+    left: 55%;
+    width: 45%;
+    transition: opacity 0.2s;
+    text-align: left;
+  }
+
+  > section:hover div {
+    transform: translateX(-50%);
+  }
+
+  > section:hover p { /* TODO hover won't work on phones (I think). Check this link for more: https://stackoverflow.com/questions/41098293/equivalent-to-hover-for-mobile-aps*/
+    opacity: 100%;
+    transition: opacity 0.5s 0.5s;
   }
 }

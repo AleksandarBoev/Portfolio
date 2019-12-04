@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{page.title}}</title>
+    <link rel="stylesheet" href="./css/responsive.css">
     <link rel="stylesheet" href="./css/common-styles.css">
     <link rel="stylesheet" href="./css/media-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -26,6 +27,7 @@
             <h2>Get in touch</h2>
             <div class="email">
                 <button><i class="fa fa-envelope"></i><input value="{{site.email}}"/></button>
+                <p>Copied</p>
             </div>
             <div class="github">
                 <a target="_blank" href="{{site.github}}"><i class="fa fa-github"></i></a>
@@ -35,17 +37,39 @@
             </div>
         </section>
     </section>
+
+    <section class="education-section">
+        <section>
+            <div class="box education-softuni">
+                <h3>Software University</h3>
+            </div>
+            <p>The software university is a place to learn software development with an empathsis on practise.</p>
+        </section>
+
+        <section>
+            <div class="box education-tu">
+                <h3>Technical University</h3>
+            </div>
+            <p>Technical University of Sofia is one of the most recognised educational establishments in the country.</p>
+        </section>
+    </section>
 </main>
 
 <script>
     const emailInput = document.getElementsByTagName('input')[0];
     const button = document.getElementsByTagName('button')[0];
+    const copiedParagraph = document.querySelector('.email p');
 
     button.addEventListener('click', () => {
         emailInput.select();
         document.execCommand('copy');
-        window.alert('Email address copied');
-        window.getSelection().removeAllRanges(); //TODO this doesn't work when using window.alert
+        window.getSelection().removeAllRanges();
+        console.log(copiedParagraph.textContent);
+        copiedParagraph.style.opacity = '100%';
+
+        setTimeout(() => {
+            copiedParagraph.style.opacity = '0';
+        }, 1000);
     });
 </script>
 </body>

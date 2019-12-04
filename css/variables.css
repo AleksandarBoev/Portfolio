@@ -6,6 +6,9 @@
     --color-orange: rgb(199, 44, 33);
 
     --font-family-main: 'Verdana', sans-serif;;
-    --font-family-heading: 'Raleway', sans-serif
+    --font-family-heading: 'Raleway', sans-serif;
 
+    --education-box-width: 25em;
+    --education-box-height: calc(var(--education-box-width) - 10em);
+    --education-section-width: calc(var(--education-box-width) * 2);
 }

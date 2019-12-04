@@ -1,7 +1,12 @@
 :root {
   --size: 3rem; }
 
+img {
+  display: block;
+  width: 100%; }
+
 .about-me {
+  padding-top: 2em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,16 +17,13 @@
     width: 8rem;
     border-radius: 50%;
     overflow: hidden; }
-    .about-me .about-me-image-container img {
-      display: block;
-      width: 100%; }
   .about-me p {
     max-width: 35em; }
 
 .about-me-social {
   width: 100%;
   display: grid;
-  grid-template-areas: 'heading heading' 'email email' 'github linkedin';
+  grid-template-areas: 'heading heading' 'email email' 'github linkedin';
   color: orange;
   justify-content: center; }
   .about-me-social input, .about-me-social button {
@@ -47,12 +49,16 @@
     text-align: center; }
   .about-me-social .email {
     grid-area: email;
-    text-align: center; }
+    text-align: center;
+    position: relative; }
     .about-me-social .email i {
       font-size: 1.5rem !important; }
     .about-me-social .email p {
-      display: inline-block;
-      margin-left: 1.1em; }
+      opacity: 0;
+      position: absolute;
+      bottom: 0;
+      left: 20em;
+      transition: opacity 0.75s; }
   .about-me-social .github {
     grid-area: github; }
   .about-me-social .linkedin {
@@ -71,3 +77,56 @@
     position: absolute;
     text-decoration: none;
     color: inherit; }
+
+.education-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .education-section > * {
+    margin-top: 3em; }
+  .education-section .education-softuni {
+    background-image: url(../images/softuni-me.jpg); }
+  .education-section .education-tu {
+    background-image: url(../images/tu.jpg); }
+  .education-section .box {
+    width: var(--education-box-width);
+    height: var(--education-box-height);
+    display: inline-block;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat; }
+  .education-section .box:before {
+    content: ' ';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(110, 110, 110, 0.6); }
+  .education-section h3 {
+    color: white;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.4); }
+  .education-section > section {
+    width: var(--education-section-width);
+    text-align: center;
+    position: relative; }
+  .education-section > section > div {
+    transition: transform 0.5s; }
+  .education-section p {
+    opacity: 0;
+    position: absolute;
+    top: 10%;
+    left: 55%;
+    width: 45%;
+    transition: opacity 0.2s;
+    text-align: left; }
+  .education-section > section:hover div {
+    transform: translateX(-50%); }
+  .education-section > section:hover p {
+    /* TODO hover won't work on phones (I think). Check this link for more: https://stackoverflow.com/questions/41098293/equivalent-to-hover-for-mobile-aps*/
+    opacity: 100%;
+    transition: opacity 0.5s 0.5s; }
