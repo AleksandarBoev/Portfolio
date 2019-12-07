@@ -1,5 +1,12 @@
 :root {
-  --size: 3rem; }
+  --social-icon-size: 3rem;
+  --education-box-width: 25rem;
+  --education-box-height: calc(var(--education-box-width) - 10rem);
+  --education-section-width: calc(var(--education-box-width) * 2);
+  --education-box-slide-time: 0.5s;
+  --timeline-line-position: 30%;
+  --timeline-line-width: 0.3em;
+  --timeline-distance-to-line: 3%; }
 
 img {
   display: block;
@@ -23,27 +30,9 @@ img {
 .about-me-social {
   width: 100%;
   display: grid;
-  grid-template-areas: 'heading heading' 'email email' 'github linkedin';
+  grid-template-areas: 'heading heading' 'email email' 'github linkedin';
   color: orange;
   justify-content: center; }
-  .about-me-social input, .about-me-social button {
-    border: none;
-    display: inline-block;
-    font-family: inherit;
-    font-size: inherit;
-    padding: 0;
-    width: auto !important;
-    background-color: inherit;
-    color: inherit;
-    cursor: pointer; }
-  .about-me-social input {
-    margin-left: 1em;
-    text-shadow: inherit;
-    width: 16em !important; }
-  .about-me-social button {
-    transition: box-shadow 1s; }
-  .about-me-social button:hover {
-    box-shadow: 0 0.2em; }
   .about-me-social > h2 {
     grid-area: heading;
     text-align: center; }
@@ -51,6 +40,23 @@ img {
     grid-area: email;
     text-align: center;
     position: relative; }
+    .about-me-social .email input, .about-me-social .email button {
+      border: none;
+      display: inline-block;
+      font-family: inherit;
+      font-size: inherit;
+      padding: 0;
+      width: auto !important;
+      background-color: inherit;
+      color: inherit;
+      cursor: pointer; }
+    .about-me-social .email input {
+      margin-left: 1em;
+      width: 16em !important; }
+    .about-me-social .email button {
+      transition: box-shadow 1s; }
+    .about-me-social .email button:hover {
+      box-shadow: 0 0.2em; }
     .about-me-social .email i {
       font-size: 1.5rem !important; }
     .about-me-social .email p {
@@ -66,17 +72,17 @@ img {
   .about-me-social .github, .about-me-social .linkedin {
     margin: 2rem;
     position: relative;
-    height: var(--size);
-    width: var(--size); }
+    height: var(--social-icon-size);
+    width: var(--social-icon-size); }
   .about-me-social i {
-    font-size: var(--size) !important;
+    font-size: var(--social-icon-size) !important;
     transition: font-size 0.5s; }
-  .about-me-social a:hover i {
-    font-size: calc(var(--size) + 1rem) !important; }
   .about-me-social a {
     position: absolute;
     text-decoration: none;
     color: inherit; }
+  .about-me-social a:hover i {
+    font-size: calc(var(--social-icon-size) + 1rem) !important; }
 
 .education-section {
   display: flex;
@@ -88,14 +94,15 @@ img {
     background-image: url(../images/softuni-me.jpg); }
   .education-section .education-tu {
     background-image: url(../images/tu.jpg); }
-  .education-section .box {
+  .education-section .education-box {
     width: var(--education-box-width);
     height: var(--education-box-height);
     display: inline-block;
     position: relative;
     background-size: cover;
-    background-repeat: no-repeat; }
-  .education-section .box:before {
+    background-repeat: no-repeat;
+    transition: transform var(--education-box-slide-time); }
+  .education-section .education-box:before {
     content: ' ';
     display: block;
     width: 100%;
@@ -105,18 +112,19 @@ img {
   .education-section h3 {
     color: white;
     position: absolute;
-    top: 15%;
+    top: 12%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: inline-block;
-    background-color: rgba(0, 0, 0, 0.4); }
+    display: block;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 80%; }
   .education-section > section {
     width: var(--education-section-width);
     text-align: center;
     position: relative; }
-  .education-section > section > div {
-    transition: transform 0.5s; }
-  .education-section p {
+  .education-section > section:hover div {
+    transform: translateX(-50%); }
+  .education-section p.education-information {
     opacity: 0;
     position: absolute;
     top: 10%;
@@ -124,9 +132,63 @@ img {
     width: 45%;
     transition: opacity 0.2s;
     text-align: left; }
-  .education-section > section:hover div {
-    transform: translateX(-50%); }
   .education-section > section:hover p {
     /* TODO hover won't work on phones (I think). Check this link for more: https://stackoverflow.com/questions/41098293/equivalent-to-hover-for-mobile-aps*/
     opacity: 100%;
-    transition: opacity 0.5s 0.5s; }
+    transition: opacity var(--education-box-slide-time) 0.5s; }
+
+.timeline {
+  margin: 0 auto;
+  width: 75%;
+  /* line container */
+  /* line */
+  /* has only 2 things in it. And there will be room between them */
+  /* circles on the line for every event */ }
+  .timeline .timeline-container {
+    position: relative;
+    margin: 0 auto; }
+  .timeline .timeline-container::after {
+    content: ' ';
+    position: absolute;
+    width: var(--timeline-line-width);
+    height: 100%;
+    background-color: black;
+    top: 0;
+    left: var(--timeline-line-position); }
+  .timeline .timeline-point {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3em;
+    position: relative;
+    transition: color 0.5s; }
+  .timeline .timeline-point:before {
+    content: ' ';
+    display: block;
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    left: var(--timeline-line-position);
+    /* places it close to the line */
+    /* move half the width of the line to the right and half of your own width to the left. This way it is perfectly centered
+    also move 40% of your height to the top. Looks centered*/
+    transform: translate(calc((0.5 * var(--timeline-line-width)) - 50%), -40%);
+    top: 0.5em; }
+  .timeline .timeline-point:hover {
+    color: darkblue; }
+  .timeline time {
+    text-align: right;
+    flex-basis: calc(var(--timeline-line-position) - var(--timeline-distance-to-line));
+    /* on the left of the line and leave some room for the "space-between" to take effect and make it look nice */ }
+  .timeline .content {
+    text-align: left;
+    flex-basis: calc(100% - var(--timeline-line-position) - var(--timeline-distance-to-line));
+    /* on the right of the line */ }
+  .timeline h2 {
+    text-align: center; }
+  .timeline h3 {
+    margin-top: 0;
+    margin-bottom: 1em; }
+  .timeline p {
+    max-width: 25em; }

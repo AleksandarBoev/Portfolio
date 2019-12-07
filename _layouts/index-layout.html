@@ -40,18 +40,33 @@
 
     <section class="education-section">
         <section>
-            <div class="box education-softuni">
+            <div class="education-box education-softuni">
                 <h3>Software University</h3>
             </div>
-            <p>The software university is a place to learn software development with an empathsis on practise.</p>
+            <p class="education-information">The software university is a place to learn software development with an emphasis on exercise and practise.</p>
         </section>
 
         <section>
-            <div class="box education-tu">
+            <div class="education-box education-tu">
                 <h3>Technical University</h3>
             </div>
-            <p>Technical University of Sofia is one of the most recognised educational establishments in the country.</p>
+            <p class="education-information">Technical University of Sofia is one of the most recognised educational establishments in the country.</p>
         </section>
+    </section>
+
+    <section class="timeline">
+        <h2>My Software Development Timeline</h2>
+        <div class="timeline-container">
+            {%- for event in site.data.timeline -%}
+            <section class="timeline-point">
+                <time>{{event.date}}</time>
+                <div class="content">
+                    <h3>{{event.title}}</h3>
+                    <p>{{event.description}}</p>
+                </div>
+            </section>
+            {%- endfor -%}
+        </div>
     </section>
 </main>
 

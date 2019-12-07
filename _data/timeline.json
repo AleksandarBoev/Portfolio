@@ -1,0 +1,82 @@
+[
+  {
+    "date": "16.09.2019",
+    "title": "Front-End",
+    "description": "Software University module about front-end development with two courses: <strong>HTML & CSS</strong> and <strong>CSS Advanced</strong>. Ends with a project defense on 15.12.2019"
+  },
+  {
+    "date": "08.08.2019",
+    "title": "Food As A Service",
+    "description": "Web application project created for Technical University of Sofia bachelor's degree defense. Technologies used include Java, Spring, PostgreSQL, Git & GitHub, Heroku cloud hosting, HTML, CSS, JavaScript. Project was defended in 26.09.2019"
+  },
+  {
+    "date": "14.05.2019",
+    "title": "JS Core",
+    "description": "JavaScript module from Software University containing three courses: <strong>JS Essentials</strong>, <strong>JS Advanced</strong> and <strong>JS Apps</strong>. Ended in 05.08.2019"
+  },
+  {
+    "date": "01.05.2019",
+    "title": "Mobile Apps with Java",
+    "description": "Course in Technical University of Sofia. Ended with a project defense on 15.05.2019."
+  },
+  {
+    "date": "20.04.2019",
+    "title": "Softuniada 2019",
+    "description": "Participated in software olympiad, hosted by Software University, where algorithmic tasks were given and had to be solved in a fixed time. Scored 511/1000 points, placing in 7th place."
+  },
+  {
+    "date": "27.03.2019",
+    "title": "BEST Engineering Week",
+    "description": "Participated in a contest, organised by 'BEST Sofia' where as part of a small team of university colleagues, we developed a small web application for validating personal identification numbers and IBANs. Contest lasted 5 hours and was held at 'UniCredit Bulbank'."
+  },
+  {
+    "date": "15.03.2019",
+    "title": "Data Mining",
+    "description": "Course in Technical University of Sofia. Ended with team console project defense on 06.06.2019. Used language was Python and the problem the project solved was lowering the risk of customers not returning loans by adjusting loan terms like loan amount and payback period."
+  },
+  {
+    "date": "14.01.2019",
+    "title": "Java Web",
+    "description": "From Software University, studied material covers web development in two courses: <strong>Java Web Development Basics</strong> and <strong>Java MVC Frameworks - Spring</strong>. Module ended in 15.04.2019"
+  },
+  {
+    "date": "30.09.2018",
+    "title": "C++ Programming",
+    "description": "Course about the fundamentals of programming with C++. Course ended with a project about custom ArrayList implementation, which was defended on 26.02.2019."
+  },
+  {
+    "date": "30.09.2018",
+    "title": "Computer Graphics with C++",
+    "description": "Technical University of Sofia course in which the basics of generating images were taught. Main library used was OpenGL. Course ended with a project defense on 26.02.2019."
+  },
+  {
+    "date": "17.09.2018",
+    "title": "Java DB",
+    "description": "Software University database module with two courses: <strong>MySQL</strong> and <strong>Spring Data</strong>. Final exam was on 10.12.2018"
+  },
+  {
+    "date": "14.05.2018",
+    "title": "Java Fundamentals",
+    "description": "Vital module from Software University. Divided into three courses: <strong>Java Advanced</strong>, <strong>Java OOP Basics</strong> and <strong>Java OOP Advanced</strong>. The last course ended with an exam on 13.08.2018"
+  },
+  {
+    "date": "24.03.2018",
+    "title": "Softuniada 2018",
+    "description": "Participated in software olympiad, organised by Software University, where algorithmic tasks were given and had to be solved in a fixed time and got 300/1000 points, placing in 165th place."
+  },
+  {
+    "date": "01.03.2018",
+    "title": "Java Programming",
+    "description": "Technical University of Sofia course about fundamentals of Java programming, ending with project defense of a simple GUI application on 29.06.2018"
+  },
+  {
+    "date": "22.01.2018",
+    "title": "Tech Module",
+    "description": "Module from Software University. Divided into two courses: <strong>Programming Fundamentals</strong> and <strong>Software Technologies</strong>. Ended in 22.04.2018"
+  },
+  {
+    "date": "07.10.2017",
+    "title": "Programming Basics with Java",
+    "description": "First course in Software University. An intro to programming. Exam was on 17.12.2017"
+  }
+]

@@ -1,6 +1,6 @@
 .navbar {
   color: var(--color-text-secondary);
-  background-color: #0069d9;
+  background-color: var(--color-background-secondary);
   display: flex; }
   .navbar ul {
     flex-basis: 75%;

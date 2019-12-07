@@ -1,12 +1,30 @@
+@import "https://fonts.googleapis.com/css?family=Raleway&display=swap";
+
 html {
-    font-family: var(--font-family-main);
+    font-family: 'Verdana', sans-serif;
     line-height: 1.4em;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-family-heading);
+    font-family: 'Raleway', sans-serif;
     line-height: 1.2;
     font-weight: bold;
     margin-top: 0.75em;
     margin-bottom: 0.75em;
+}
+
+h1 {
+    font-size: 1.8rem;
+}
+
+h2 {
+    font-size: 1.6rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+h4 {
+    font-size: 1.2rem;
 }
