@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{page.title}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/common-styles.css">
+    <link rel="stylesheet" href="./css/certificates.css">
+</head>
+<body>
+{% include header.html %}
+
+<main class="certificates-page">
+    <h1>{{page.header-title}}</h1>
+    <aside class="certificates-aside">
+        <h2>Documents</h2>
+        <ul>
+            {%- for certificate in site.data.certificates -%}
+            <li certificate-number="{%- increment certificate_name_counter -%}">{{certificate.name}}</li>
+            {%- endfor -%}
+        </ul>
+    </aside>
+
+    <div class="img-container">
+        {%- for certificate in site.data.certificates -%}
+        <img src="{{certificate.imageUrl}}">
+        {%- endfor -%}
+    </div>
+
+</main>
+
+<script>
+    const certificatesElements = {
+        ulElement: document.querySelector('.certificates-aside ul'),
+        currentLiElement: document.querySelector('.certificates-aside ul li'), //first li element will be the selected when loading the page
+        imgElements: [...document.querySelectorAll('.certificates-page img')],
+        currentImgElement: document.querySelector('.certificates-page img'), //first img element will appear when loading the page
+    };
+
+    certificatesElements.currentLiElement.classList.add('selected');
+    certificatesElements.currentImgElement.classList.add('effect');
+
+    certificatesElements.ulElement.addEventListener('click', ev => {
+        if (ev.target.tagName.toLowerCase() !== 'li' || ev.target.classList.contains('selected')) {
+            //if clicked element is different than "li" or is already selected, do nothing
+            return;
+        }
+
+        certificatesElements.currentLiElement.classList.remove('selected');
+        certificatesElements.currentLiElement = ev.target;
+        certificatesElements.currentLiElement.classList.add('selected');
+
+        const certificateNumber = Number.parseInt(certificatesElements.currentLiElement.getAttribute('certificate-number'));
+
+        certificatesElements.currentImgElement.classList.remove('effect'); // image fades away to the left
+        certificatesElements.currentImgElement = certificatesElements.imgElements[certificateNumber]; //change current image
+        certificatesElements.currentImgElement.classList.add('effect'); // image fades in from the left
+    });
+
+</script>
+</body>
+</html>

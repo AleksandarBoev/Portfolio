@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Certificates</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/common-styles.css">
+    <link rel="stylesheet" href="./css/certificates.css">
+</head>
+<body>
+<header><nav class="navbar">
+        <ul>
+            <li class="">
+                <a href="/portfolio/">About Me</a>
+            </li>
+            <li class="selected">
+                <a href="/portfolio/certificates">Certificates</a>
+            </li>
+            <li class="">
+                <a href="/portfolio/projects">Projects</a>
+            </li>
+            <li class="">
+                <a href="/portfolio/contact-me">Contact Me</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<main class="certificates-page">
+    <h1>Certificates</h1>
+    <aside class="certificates-aside">
+        <h2>Documents</h2>
+        <ul><li certificate-number="0">HTML & CSS</li><li certificate-number="1">JS Apps</li><li certificate-number="2">JS Advanced</li><li certificate-number="3">JS Essentials</li><li certificate-number="4">Java Web Development Basics</li><li certificate-number="5">Databases Frameworks - Hibernate & Spring Data</li><li certificate-number="6">Database Basics MySQL</li><li certificate-number="7">Java OOP Advanced</li><li certificate-number="8">Java OOP Basics</li><li certificate-number="9">Java Advanced</li><li certificate-number="10">Software Technologies</li><li certificate-number="11">Programming Fundamentals</li><li certificate-number="12">Programming Basics</li></ul>
+    </aside>
+
+    <div class="img-container"><img src="https://i.ibb.co/563RQS4/HTML-amp-CSS-September-2019-Certificate.png"><img src="https://i.ibb.co/GdHDvLg/JS-Apps-July-2019-Certificate.png"><img src="https://i.ibb.co/1sZLfJM/JS-Advanced-June-2019-Certificate.png"><img src="https://i.ibb.co/zQW1tY0/JS-Essentials-May-2019-Certificate.png"><img src="https://i.ibb.co/PQ9kxpM/Java-Web-Development-Basics-January-2019-Certificate.png"><img src="https://i.ibb.co/BgG0Cjm/Databases-Frameworks-Hibernate-Spring-Data-October2018-Certificate.png"><img src="https://i.ibb.co/jL7M9vM/Database-Basics-My-SQL-September-2018-Certificate.png"><img src="https://i.ibb.co/Y0rcZXP/Java-OOP-Advanced-July-2018-Certificate.png"><img src="https://i.ibb.co/N2782Qs/Java-OOP-Basics-June-2018-Certificate.png"><img src="https://i.ibb.co/RzMMnnR/Java-Advanced-May-2018-Certificate.png"><img src="https://i.ibb.co/bd12Gvz/Software-Technologies-March-2018-Certificate.png"><img src="https://i.ibb.co/NVvxHYX/Programming-Fundamentals-January-2018-Certificate.png"><img src="https://i.ibb.co/M9Nv73J/Programming-Basics-with-Java-october-2017-Certificate.png"></div>
+
+</main>
+
+<script>
+    const certificatesElements = {
+        ulElement: document.querySelector('.certificates-aside ul'),
+        currentLiElement: document.querySelector('.certificates-aside ul li'), //first li element will be the selected when loading the page
+        imgElements: [...document.querySelectorAll('.certificates-page img')],
+        currentImgElement: document.querySelector('.certificates-page img'), //first img element will appear when loading the page
+    };
+
+    certificatesElements.currentLiElement.classList.add('selected');
+    certificatesElements.currentImgElement.classList.add('effect');
+
+    certificatesElements.ulElement.addEventListener('click', ev => {
+        if (ev.target.tagName.toLowerCase() !== 'li' || ev.target.classList.contains('selected')) {
+            //if clicked element is different than "li" or is already selected, do nothing
+            return;
+        }
+
+        certificatesElements.currentLiElement.classList.remove('selected');
+        certificatesElements.currentLiElement = ev.target;
+        certificatesElements.currentLiElement.classList.add('selected');
+
+        const certificateNumber = Number.parseInt(certificatesElements.currentLiElement.getAttribute('certificate-number'));
+
+        certificatesElements.currentImgElement.classList.remove('effect'); // image fades away to the left
+        certificatesElements.currentImgElement = certificatesElements.imgElements[certificateNumber]; //change current image
+        certificatesElements.currentImgElement.classList.add('effect'); // image fades in from the left
+    });
+
+</script>
+</body>
+</html>

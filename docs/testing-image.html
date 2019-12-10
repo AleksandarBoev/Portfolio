@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Testing Image</title>
+    <style>
+        .img-container {
+            margin: 0 auto;
+            width: 35%;
+            height: auto;
+            transform: translateX(-100%);
+            background-color: black;
+            padding: 1em;
+            /*animation: fadeoutFadein;*/
+        }
+
+        .animation-class {
+            animation: fadeoutFadein;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+
+        @keyframes fadeoutFadein {
+            50% {
+                transform: translateX(-200px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<button>Change Image</button>
+<div class="img-container">
+    <img/>
+</div>
+
+<script>
+
+    let counter = 0;
+    const arrayOfUrls = [
+        'https://i.ibb.co/NVvxHYX/Programming-Fundamentals-January-2018-Certificate.png',
+        'https://i.ibb.co/BgG0Cjm/Databases-Frameworks-Hibernate-Spring-Data-October2018-Certificate.png',
+        'https://static0.cbrimages.com/wordpress/wp-content/uploads/2019/11/dc-10-rarest-batman-comics-what-theyre-worth.jpg'];
+
+    const imgElement = document.getElementsByTagName('img')[0];
+    imgElement.src = 'https://i.ibb.co/NVvxHYX/Programming-Fundamentals-January-2018-Certificate.png';
+
+    const imgContainer = document.getElementsByClassName('img-container')[0];
+
+    const button = document.getElementsByTagName('button')[0];
+    button.addEventListener('click', () => {
+        counter++;
+        if (counter > 2) {
+            counter = 0;
+        }
+
+        imgElement.src = arrayOfUrls[counter];
+        if (counter % 2 === 0) {
+            imgContainer.classList.add('animation');
+        } else {
+            imgContainer.style.animation = 'changeColor 4s';
+        }
+        console.log(imgContainer);
+    });
+</script>
+</body>
+</html>

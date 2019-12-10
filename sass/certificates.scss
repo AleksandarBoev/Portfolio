@@ -1,0 +1,74 @@
+:root {
+  --hover-background: rgb(150, 150, 150);
+  --selected-background: rgb(200, 200, 200);
+  --img-effect-duration: 0.65s;
+  --main-view-height: 80vh;
+}
+
+.certificates-page {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  h1 {
+    text-align: center;
+    flex-basis: 100%;
+  }
+
+  .img-container {
+    display: inline-block;
+    flex-basis: 60%;
+    height: var(--main-view-height);
+    overflow: auto; // do not allow the image inside to be visible outside the container when it gets moved with "translate". Also add scroll if img height is cropped
+    position: relative; // img absolute position will position itself inside nearest relative positioned element
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: absolute; // do not disrupt other elements positions when being moved
+    transition: opacity calc(var(--img-effect-duration) + 0.25 * (var(--img-effect-duration))), transform calc(var(--img-effect-duration) + 0.25 * (var(--img-effect-duration))); //time it takes to fade out, a.k.a. when loosing "effect" class
+    opacity: 0; // all images are initially invisible. Only the one with "effect" class will be seen
+    transform: translateX(-100%); // all images initially are their own width to the left
+    z-index: -1; // all images initially are behind all other elements
+  }
+
+  .effect {
+    opacity: 1; // appear
+    transform: translateX(0); // go to your original position - inside the container
+    transition: opacity var(--img-effect-duration) var(--img-effect-duration), transform var(--img-effect-duration) var(--img-effect-duration); //time it takes to appear, a.k.a. when getting "effect" class, and how much to wait before activating appear animation
+    z-index: 1; // puts the image in front
+  }
+}
+
+.certificates-aside {
+  flex-basis: 30%;
+  background-color: rgb(230, 230, 230);
+  padding: 0.5rem;
+  height: var(--main-view-height);
+  overflow: auto;
+
+  h2 {
+    margin-bottom: 1em;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  li {
+    padding: 0.5em 0.5em;
+  }
+
+  li:hover {
+    background-color: var(--hover-background);
+    cursor: pointer;
+  }
+
+  .selected {
+    background-color: var(--selected-background);
+  }
+}
