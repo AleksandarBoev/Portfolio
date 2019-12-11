@@ -5,17 +5,17 @@
 
     <nav class="navbar">
         <ul>
-            <li class="{% if page.permalink == '/' %}selected{% endif %}">
-                <a href="{{url_start}}/">About Me</a>
+            <li>
+                <a class="{% if page.permalink == '/' %}selected{% endif %}" href="{{url_start}}/">About Me</a>
             </li>
-            <li class="{% if page.permalink == '/certificates' %}selected{% endif %}">
-                <a href="{{url_start}}/certificates">Certificates</a>
+            <li>
+                <a class="{% if page.permalink == '/certificates' %}selected{% endif %}" href="{{url_start}}/certificates">Certificates</a>
             </li>
-            <li class="{% if page.permalink == '3' %}selected{% endif %}">
-                <a href="{{url_start}}/projects">Projects</a>
+            <li>
+                <a class="{% if page.permalink == '3' %}selected{% endif %}" href="{{url_start}}/projects">Projects</a>
             </li>
-            <li class="{% if page.permalink == '/contact-me' %}selected{% endif %}">
-                <a href="{{url_start}}/contact-me">Contact Me</a>
+            <li>
+                <a class="opacity {% if page.permalink == '/contact-me' %}selected{% endif %}" href="{{url_start}}/contact-me">Contact Me</a>
             </li>
         </ul>
     </nav>

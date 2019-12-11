@@ -9,12 +9,40 @@
   .navbar li {
     padding: 0.5em 0.75em;
     display: inline-block;
-    transition: background-color 0.5s; }
+    transition: background-color 0.5s;
+    opacity: 0;
+    animation-name: appear;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards; }
+    .navbar li:nth-of-type(1) {
+      animation-delay: 0s; }
+    .navbar li:nth-of-type(2) {
+      animation-delay: 0.15s; }
+    .navbar li:nth-of-type(3) {
+      animation-delay: 0.3s; }
+    .navbar li:nth-of-type(4) {
+      animation-delay: 0.45s; }
   .navbar a {
     display: block;
     text-decoration: none;
-    color: inherit; }
-  .navbar li:hover {
-    background-color: #0096e6; }
-  .navbar .selected {
-    background-color: #0096e6; }
+    color: inherit;
+    transition: box-shadow 0.5s; }
+  .navbar li:hover a {
+    box-shadow: 0 0.1em; }
+  .navbar a.selected {
+    animation-name: underscore;
+    animation-duration: 0.5s;
+    animation-delay: 0.75s;
+    animation-fill-mode: forwards; }
+
+@keyframes appear {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 100%; } }
+
+@keyframes underscore {
+  0% {
+    box-shadow: none; }
+  100% {
+    box-shadow: 0 0.1em; } }

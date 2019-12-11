@@ -1,4 +1,8 @@
 .navbar {
+  $appear-delay: 0.15s;
+  $appear-duration: 0.5s;
+  $box-shadow-values: 0 0.1em;
+
   color: var(--color-text-secondary);
   background-color: var(--color-background-secondary);
   display: flex;
@@ -13,19 +17,52 @@
     padding: 0.5em 0.75em;
     display: inline-block;
     transition: background-color 0.5s;
+    opacity: 0; //all li elements are invisible initially
+    animation-name: appear; // animation starts when page is loaded
+    animation-duration: $appear-duration;
+    animation-fill-mode: forwards; // effects of animation stay (opacity stays at 100%)
+
+    @for $i from 1 through 4 {
+      &:nth-of-type(#{$i}) { // & --> replaced with "li". nth-of-type goes through all 4 of the elements
+        animation-delay: ($i - 1) * $appear-delay; // have a bigger animation delay on latter elements. This makes it seem like they appear from left to right
+      }
+    }
   }
 
   a {
     display: block;
     text-decoration: none;
     color: inherit;
+    transition: box-shadow $appear-duration;
   }
 
-  li:hover {
-    background-color: rgb(0, 150, 230);
+  li:hover a { //when hovering over "li", apply an effect to "a"
+    box-shadow: $box-shadow-values;
   }
 
-  .selected {
-    background-color: rgb(0, 150, 230);
+  a.selected {
+    animation-name: underscore;
+    animation-duration: $appear-duration;
+    animation-delay: $appear-delay * 5; // add the underscore after all "li" elements have appeared
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes appear {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 100%;
+    }
+  }
+
+  @keyframes underscore {
+    0% {
+      box-shadow: none;
+    }
+    100% {
+      box-shadow: $box-shadow-values;
+    }
   }
 }
+
