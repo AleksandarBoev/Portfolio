@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Food as a Service",
+    "imgUrl": "https://i.ibb.co/ctLY9zg/FaaS.png",
+    "description": "Web application which serves as a platform for creating and managing restaurants and food products as well as purchasing the products.",
+    "urlEnding": "faas"
+  },
+  {
+    "title": "Currency Converter",
+    "imgUrl": "https://i.ibb.co/g7wm00Z/Currency-Converter.png",
+    "description": "Using React for front-end and Java for back-end, as part of a team we developed a simple online currency converter.",
+    "urlEnding": "currency-converter"
+  },
+  {
+    "title": "Validator",
+    "imgUrl": "https://i.ibb.co/bHGtqzy/Validator.png",
+    "description": "Application for validating the correct format and information of personal identification numbers and IBANs",
+    "urlEnding": "validator"
+  }
+]

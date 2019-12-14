@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FaaS</title>
+    <link rel="stylesheet" href="../css/common-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/single-project.css">
+</head>
+<body><header><nav class="navbar">
+        <ul>
+            <li>
+                <a class="" href="/portfolio/">About Me</a>
+            </li>
+            <li>
+                <a class="" href="/portfolio/certificates">Certificates</a>
+            </li>
+            <li>
+                <a class="" href="/portfolio/projects">Projects</a>
+            </li>
+            <li>
+                <a class="opacity " href="/portfolio/contact-me">Contact Me</a>
+            </li>
+        </ul>
+    </nav>
+</header><main class="single-project-page">
+    <h1>Food as a Service</h1>
+    <div class="slider"><img src="https://img1.looper.com/img/gallery/new-batman-theory-is-taking-the-internet-for-a-spin/intro-1573506972.jpg"><img src="http://cdn3.whatculture.com/images/2019/10/ebb3d7e600c0a008-600x338.jpg"><img src="https://static0.srcdn.com/wordpress/wp-content/uploads/2019/11/Batman-Alfred-Death-Preview.jpg"><img src="https://gamespot1.cbsistatic.com/uploads/original/1582/15828986/3567683-batman%20hed.jpg"><img src="https://ichef.bbci.co.uk/news/1024/branded_news/D778/production/_108906155_p07p1ndz.jpg"><i class="fa fa-arrow-left"></i>
+        <i class="fa fa-arrow-right"></i>
+    </div>
+    <section>
+        <h2>About this project</h2><p>blablabla</p><p>wooooo</p></section>
+    <section>
+        <h2>Technologies used</h2>
+        <ul><li>Java</li><li>Spring</li><li>Spring Data</li><li>Spring MVC</li><li>PostgreSQL</li><li>HTML5</li><li>CSS3</li><li>Bootstrap 4</li><li>JavaScript</li></ul>
+    </section>
+    <section>
+        <h2>Resources</h2><a href="appstuff" target="_blank"><i class="fa fa-link"></i>appstuff</a>
+        <br/><a href="gitstuff" target="_blank"><i class="fa fa-github"></i>gitstuff</a></section>
+</main>
+
+
+
+
+<script>
+    const images = document.querySelectorAll('.slider img');
+    images[0].classList.add('current-img');
+    let currentIndex = 0;
+
+    const leftArrow = document.getElementsByClassName('fa-arrow-left')[0];
+    const rightArrow = document.getElementsByClassName('fa-arrow-right')[0];
+
+    leftArrow.classList.add('hide-arrow');
+
+    leftArrow.addEventListener('click', () => {
+        images[currentIndex].classList.remove('current-img');
+        images[currentIndex].classList.add('right'); //pressing left arrow will send the old image to the right
+        currentIndex--;
+        images[currentIndex].classList.remove('right', 'left');
+        images[currentIndex].classList.add('current-img');
+
+        rightArrow.classList.remove('hide-arrow');
+        if (currentIndex === 0) {
+            leftArrow.classList.add('hide-arrow');
+        }
+    });
+
+    rightArrow.addEventListener('click', () => {
+        images[currentIndex].classList.remove('current-img');
+        images[currentIndex].classList.add('left'); //pressing right arrow will send the old image to the left
+        currentIndex++;
+        images[currentIndex].classList.remove('right', 'left');
+        images[currentIndex].classList.add('current-img');
+
+        leftArrow.classList.remove('hide-arrow');
+        if (currentIndex === images.length - 1) {
+            rightArrow.classList.add('hide-arrow');
+        }
+    });
+</script>
+</body>
+</html>

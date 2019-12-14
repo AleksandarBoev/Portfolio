@@ -1,0 +1,62 @@
+@media (min-width: 320px) {
+  .projects-page {
+    width: 70%; }
+  .projects-page > * {
+    flex-basis: 100%; }
+  .img-container {
+    height: 18em; } }
+
+@media (min-width: 1024px) {
+  .projects-page {
+    width: 80%; }
+  .projects-page > * {
+    flex-basis: 40%; }
+  .img-container {
+    height: 14em; } }
+
+.projects-page {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; }
+  .projects-page > * {
+    margin-top: 3em; }
+  .projects-page img {
+    display: block;
+    width: 100%;
+    vertical-align: middle; }
+  .projects-page .img-container {
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0 5px;
+    z-index: 1;
+    background-color: white; }
+  .projects-page section {
+    box-shadow: 0 0 10px 5px;
+    overflow: hidden;
+    border-radius: 0.5em;
+    background-color: #eeeeee;
+    position: relative;
+    /* button with "absolute" can be positioned */ }
+  .projects-page h2 {
+    padding: 1rem; }
+  .projects-page p {
+    padding: 0 1em 1em 1em; }
+  .projects-page a {
+    display: inline-block;
+    padding: 0.5em;
+    border-radius: 0.25em;
+    color: white;
+    background-color: green;
+    text-decoration: none;
+    position: absolute;
+    /* will always be on the bottom right no matter the height of the boxes */
+    bottom: 5%;
+    right: 5%;
+    transition: color 0.5s, background-color 0.5s; }
+  .projects-page a:hover {
+    background-color: lightgreen;
+    color: black; }
+  .projects-page .button-container {
+    /* only job is to stretch the section, so that there is room for the button*/
+    height: 4em; }

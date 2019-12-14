@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{page.title}}</title>
+    <link rel="stylesheet" href="../css/common-styles.css">
+    <link rel="stylesheet" href="../css/projects.css">
+</head>
+<body>
+
+{% include header.html %}
+<main class="projects-page">
+    {%- for project in site.data.projects -%}
+    <section>
+        <div class="img-container">
+            <img src="{{project.imgUrl}}">
+        </div>
+        <div class="project-information">
+            <h2>{{project.title}}</h2>
+            <p>{{project.description}}</p>
+        </div>
+        <div class="button-container">
+            <a href="{{url_start}}/projects/{{project.urlEnding}}">Learn More</a>
+            <!--TODO like in the header - check the site.baseUrl thing to generate proper href to project page-->
+        </div>
+    </section>
+    {%- endfor -%}
+</main>
+
+</body>
+</html>

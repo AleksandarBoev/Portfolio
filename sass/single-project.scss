@@ -1,0 +1,94 @@
+.single-project-page {
+  width: 45rem;
+  margin: 3rem auto;
+
+  h1 {
+    text-align: center;
+    margin: 0;
+  }
+
+  h2 {
+    box-shadow: 0 0.10rem black;
+  }
+
+  section {
+    margin-bottom: 4rem;
+  }
+
+  ul {
+    list-style: square;
+    margin-left: 1em;
+  }
+
+  a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    margin-bottom: 0.5em;
+    transition: box-shadow 0.25s;
+  }
+
+  a:hover {
+    box-shadow: 0 0.10rem black;
+  }
+
+  i.fa-link, i.fa-github {
+    margin-right: 1em;
+  }
+
+  p {
+    margin-bottom: 1.5em;
+  }
+}
+
+.slider {
+  position: relative; /* for the absolute images inside */
+  height: 28rem;
+  background-color: white; /* if an image does not fill the height, this color is seen */
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between; /* arrows will be on opposite ends */
+  align-items: center; /* arrows will be centered vertically */
+
+  overflow: hidden; /* images with translateX outside this container will not be visible */
+
+  i {
+    opacity: 20%; /* becomes transparent */
+    font-size: 5rem !important;
+    transition: opacity 0.25s;
+
+    z-index: 1; /* be in the front */
+    background-color: white; /* opacity effects background too. Looks nice */
+  }
+
+  i:hover {
+    opacity: 35%;
+    cursor: pointer;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    position: absolute;
+
+    transform: translateX(100%); /* all images are to the right initially */
+    transition: transform 0.75s;
+  }
+
+  .current-img {
+    transform: translateX(0); /* image will be in it's original position: inside the slider container and will be visible */
+  }
+
+  .left {
+    transform: translateX(-100%);
+  }
+
+  .right {
+    transform: translateX(100%);
+  }
+
+  .hide-arrow { /* can't be clicked */
+    z-index: -1;
+  }
+}
