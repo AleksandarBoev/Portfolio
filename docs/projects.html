@@ -4,25 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Projects</title>
-    <link rel="stylesheet" href="./css/common-styles.css">
-    <link rel="stylesheet" href="./css/projects.css">
+    <title>Projects</title><link rel="stylesheet" href="../css/common-styles.css">
+    <link rel="stylesheet" href="../css/projects.css"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
 </head>
 <body>
 
 <header><nav class="navbar">
         <ul>
             <li>
-                <a class="" href="/portfolio/">About Me</a>
+                <a class="" href="/">About Me</a>
             </li>
             <li>
-                <a class="" href="/portfolio/certificates">Certificates</a>
+                <a class="" href="/certificates">Certificates</a>
             </li>
             <li>
-                <a class="selected" href="/portfolio/projects">Projects</a>
+                <a class="selected" href="/projects">Projects</a>
             </li>
             <li>
-                <a class="opacity " href="/portfolio/contact-me">Contact Me</a>
+                <a class="opacity " href="/contact-me">Contact Me</a>
             </li>
         </ul>
     </nav>
@@ -36,7 +36,7 @@
             <p>Web application which serves as a platform for creating and managing restaurants and food products as well as purchasing the products.</p>
         </div>
         <div class="button-container">
-            <a href="/portfolio/projects/faas">Learn More</a>
+            <a href="/projects/faas">Learn More</a>
             <!--TODO like in the header - check the site.baseUrl thing to generate proper href to project page-->
         </div>
     </section><section>
@@ -48,7 +48,7 @@
             <p>Using React for front-end and Java for back-end, as part of a team we developed a simple online currency converter.</p>
         </div>
         <div class="button-container">
-            <a href="/portfolio/projects/currency-converter">Learn More</a>
+            <a href="/projects/currency-converter">Learn More</a>
             <!--TODO like in the header - check the site.baseUrl thing to generate proper href to project page-->
         </div>
     </section><section>
@@ -60,10 +60,39 @@
             <p>Application for validating the correct format and information of personal identification numbers and IBANs</p>
         </div>
         <div class="button-container">
-            <a href="/portfolio/projects/validator">Learn More</a>
+            <a href="/projects/validator">Learn More</a>
             <!--TODO like in the header - check the site.baseUrl thing to generate proper href to project page-->
         </div>
     </section></main>
-
-</body>
+<footer>
+    <section class="get-in-touch">
+        <h2>Get in touch</h2>
+        <div class="email">
+            <button><i class="fa fa-envelope"></i><input value="aleksandarboev95@gmail.com"/></button> <!--button is needed, because JS can't detect clicking on input properly-->
+            <p class="copied">Copied</p>
+        </div>
+        <div class="github">
+            <a target="_blank" href="https://github.com/AleksandarBoev"><i class="fa fa-github"></i></a>
+        </div>
+        <div class="linkedin">
+            <a target="_blank" href="https://www.linkedin.com/in/aleksandar-boev-9a6345158/"><i class="fa fa-linkedin"></i></a>
+        </div>
+    </section>
+    <section class="technologies">
+        <h2 class="wat">Website Technologies</h2>
+        <section id="html-drawing"><div class="orange o1"></div><div class="orange o2"></div><div class="orange o3"></div><div class="orange o4"></div><div class="orange o5"></div><div class="orange o6"></div><div class="orange o7"></div><div class="orange o8"></div><div class="orange o9"></div><div class="orange o10"></div><div class="orange o11"></div><div class="light-orange l1"></div><div class="light-orange l2"></div><div class="light-orange l3"></div><div class="light-orange l4"></div><div class="light-orange l5"></div><div class="light-orange l6"></div><div class="white w1"></div><div class="white w2"></div><div class="white w3"></div><div class="white w4"></div><div class="white w5"></div><div class="white w6"></div><div class="surrounding s1"></div><div class="surrounding s2"></div><div class="surrounding s3"></div><div class="surrounding s4"></div><div class="surrounding s5"></div><div class="surrounding s6"></div><div class="surrounding s7"></div><div class="surrounding s8"></div><div class="surrounding s9"></div><div class="surrounding s10"></div></section>
+        <section id="css-drawing"><div class="blue b1"></div><div class="blue b2"></div><div class="blue b3"></div><div class="blue b4"></div><div class="blue b5"></div><div class="blue b6"></div><div class="blue b7"></div><div class="blue b8"></div><div class="blue b9"></div><div class="blue b10"></div><div class="blue b11"></div><div class="cyan c1"></div><div class="cyan c2"></div><div class="cyan c3"></div><div class="cyan c4"></div><div class="cyan c5"></div><div class="cyan c6"></div><div class="white w1"></div><div class="white w2"></div><div class="white w3"></div><div class="white w4"></div><div class="white w5"></div><div class="surrounding s1"></div><div class="surrounding s2"></div><div class="surrounding s3"></div><div class="surrounding s4"></div></section>
+        <div class="technology-img-container">
+            <a target="_blank" href="https://sass-lang.com/">
+                <img src="https://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg">
+            </a>
+        </div>
+        <div class="technology-img-container">
+            <a target="_blank" href="https://jekyllrb.com/">
+                <img src="https://jekyllrb.com/img/logo-2x.png">
+            </a>
+        </div>
+    </section>
+</footer>
+<script src="./javascript/copy-email.js"></script></body>
 </html>

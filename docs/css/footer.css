@@ -1,0 +1,214 @@
+footer {
+  background-color: gray;
+  display: flex;
+  justify-content: space-around; }
+  footer > * {
+    flex-basis: 40%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  footer > * > * {
+    margin: 1.2rem 0; }
+  footer h2 {
+    color: white;
+    text-align: center; }
+  footer .get-in-touch {
+    color: orange; }
+    footer .get-in-touch .email {
+      position: relative; }
+      footer .get-in-touch .email input, footer .get-in-touch .email button {
+        border: none;
+        font-family: inherit;
+        font-size: inherit;
+        padding: 0;
+        background-color: inherit;
+        color: inherit;
+        display: inline-block;
+        cursor: pointer; }
+      footer .get-in-touch .email input {
+        margin-left: 1em;
+        width: 16em !important; }
+      footer .get-in-touch .email button {
+        transition: box-shadow 1s; }
+      footer .get-in-touch .email button:hover {
+        box-shadow: 0 0.2em; }
+      footer .get-in-touch .email .fa-envelope {
+        font-size: 1.5rem !important; }
+      footer .get-in-touch .email p.copied {
+        opacity: 0;
+        position: absolute;
+        bottom: 0;
+        left: 20em;
+        transition: opacity 0.75s; }
+    footer .get-in-touch .github, footer .get-in-touch .linkedin {
+      position: relative;
+      height: 3rem;
+      width: 3rem; }
+    footer .get-in-touch .fa-github, footer .get-in-touch .fa-linkedin {
+      font-size: 3rem !important;
+      transition: font-size 0.5s; }
+    footer .get-in-touch a {
+      position: absolute;
+      text-decoration: none;
+      color: inherit; }
+    footer .get-in-touch a:hover i {
+      font-size: 4rem !important; }
+  footer .technologies {
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center; }
+    footer .technologies h2 {
+      grid-column: span 2; }
+
+#css-drawing, #html-drawing {
+  width: 6rem;
+  height: 6rem;
+  display: grid;
+  transition: grid-gap 0.5s;
+  grid-gap: 0; }
+
+#css-drawing:hover, #html-drawing:hover {
+  grid-gap: 3.5%; }
+
+#html-drawing {
+  grid-template-areas: 'o1 o1 o7 o7 o7 o7 o7 o7 o7 o6' 'o1 o1 o8 o8 o8 l1 l1 l1 l1 o6' 'o1 o1 w1 w1 w1 w1 w1 w1 l2 o6' 'o1 o1 w2 o9 o9 l3 l3 l3 l2 o6' 'o1 o1 w2 o9 o9 l3 l3 l3 l2 o6' 'o1 o1 w2 w3 w3 w3 w3 w3 l2 o6' 'o1 o1 o10 o10 o10 l4 l4 w4 l2 o6' 'o1 o1 w6 o11 o11 l4 l4 w4 l2 o6' 'o1 o1 w5 w5 w5 w5 w5 w4 l2 o6' 'o1 o1 o2 o2 o2 l6 l6 l6 l2 o6' 'o1 o1 o2 o2 o2 l6 l6 l6 o5 o5' 's1 s1 o2 o2 o2 l5 o4 o4 s4 s4' 's1 s1 s2 s2 o3 o3 s3 s3 s4 s4'; }
+  #html-drawing .orange {
+    background-color: #e44f26; }
+  #html-drawing .light-orange {
+    background-color: #f1662a; }
+  #html-drawing .white {
+    background-color: white; }
+  #html-drawing .o1 {
+    grid-area: o1; }
+  #html-drawing .o2 {
+    grid-area: o2; }
+  #html-drawing .o3 {
+    grid-area: o3; }
+  #html-drawing .o4 {
+    grid-area: o4; }
+  #html-drawing .o5 {
+    grid-area: o5; }
+  #html-drawing .o6 {
+    grid-area: o6; }
+  #html-drawing .o7 {
+    grid-area: o7; }
+  #html-drawing .o8 {
+    grid-area: o8; }
+  #html-drawing .o9 {
+    grid-area: o9; }
+  #html-drawing .o10 {
+    grid-area: o10; }
+  #html-drawing .o11 {
+    grid-area: o11; }
+  #html-drawing .l1 {
+    grid-area: l1; }
+  #html-drawing .l2 {
+    grid-area: l2; }
+  #html-drawing .l3 {
+    grid-area: l3; }
+  #html-drawing .l4 {
+    grid-area: l4; }
+  #html-drawing .l5 {
+    grid-area: l5; }
+  #html-drawing .l6 {
+    grid-area: l6; }
+  #html-drawing .l7 {
+    grid-area: l7; }
+  #html-drawing .w1 {
+    grid-area: w1; }
+  #html-drawing .w2 {
+    grid-area: w2; }
+  #html-drawing .w3 {
+    grid-area: w3; }
+  #html-drawing .w4 {
+    grid-area: w4; }
+  #html-drawing .w5 {
+    grid-area: w5; }
+  #html-drawing .w6 {
+    grid-area: w6; }
+  #html-drawing .s1 {
+    grid-area: s1; }
+  #html-drawing .s2 {
+    grid-area: s2; }
+  #html-drawing .s3 {
+    grid-area: s3; }
+  #html-drawing .s4 {
+    grid-area: s4; }
+
+#css-drawing {
+  grid-template-areas: 'b1 b1 b7 b7 b7 b7 b7 b7 b7 b6' 'b1 b1 b8 b8 b8 c1 c1 c1 c1 b6' 'b1 b1 w1 w1 w1 w1 w1 w1 c2 b6' 'b1 b1 b9 b10 b10 c6 c6 w2 c2 b6' 'b1 b1 b9 b10 b10 c6 c6 w2 c2 b6' 'b1 b1 b9 w3 w3 w3 w3 w2 c2 b6' 'b1 b1 b9 b11 b11 c5 c5 w2 c2 b6' 'b1 b1 w5 b11 b11 c5 c5 w2 c2 b6' 'b1 b1 w4 w4 w4 w4 w4 w2 c2 b6' 'b1 b1 b2 b2 b2 c3 c3 c3 c2 b6' 'b1 b1 b2 b2 b2 c3 c3 c3 b5 b5' 's1 s1 b2 b2 b2 c4 b4 b4 s4 s4' 's1 s1 s2 s2 b3 b3 s3 s3 s4 s4'; }
+  #css-drawing .blue {
+    background-color: #1572b6; }
+  #css-drawing .cyan {
+    background-color: #33a9dc; }
+  #css-drawing .white {
+    background-color: white; }
+  #css-drawing .surrounding {
+    background-color: inherit; }
+  #css-drawing .b1 {
+    grid-area: b1; }
+  #css-drawing .b2 {
+    grid-area: b2; }
+  #css-drawing .b3 {
+    grid-area: b3; }
+  #css-drawing .b4 {
+    grid-area: b4; }
+  #css-drawing .b5 {
+    grid-area: b5; }
+  #css-drawing .b6 {
+    grid-area: b6; }
+  #css-drawing .b7 {
+    grid-area: b7; }
+  #css-drawing .b8 {
+    grid-area: b8; }
+  #css-drawing .b9 {
+    grid-area: b9; }
+  #css-drawing .b10 {
+    grid-area: b10; }
+  #css-drawing .b11 {
+    grid-area: b11; }
+  #css-drawing .c1 {
+    grid-area: c1; }
+  #css-drawing .c2 {
+    grid-area: c2; }
+  #css-drawing .c3 {
+    grid-area: c3; }
+  #css-drawing .c4 {
+    grid-area: c4; }
+  #css-drawing .c5 {
+    grid-area: c5; }
+  #css-drawing .c6 {
+    grid-area: c6; }
+  #css-drawing .w1 {
+    grid-area: w1; }
+  #css-drawing .w2 {
+    grid-area: w2; }
+  #css-drawing .w3 {
+    grid-area: w3; }
+  #css-drawing .w4 {
+    grid-area: w4; }
+  #css-drawing .w5 {
+    grid-area: w5; }
+  #css-drawing .s1 {
+    grid-area: s1; }
+  #css-drawing .s2 {
+    grid-area: s2; }
+  #css-drawing .s3 {
+    grid-area: s3; }
+  #css-drawing .s4 {
+    grid-area: s4; }
+
+.technology-img-container {
+  position: relative;
+  width: 5rem;
+  height: 5rem; }
+  .technology-img-container img {
+    position: absolute;
+    display: block;
+    width: 100%;
+    transition: transform 1s; }
+  .technology-img-container :hover {
+    transform: scale(1.35, 1.35); }

@@ -1,0 +1,255 @@
+
+footer {
+  background-color: gray;
+  display: flex;
+  justify-content: space-around; // 5% (nothing) | 40% (get-in-touch) | 5%(nothing) | 5%(nothing) | 40% (technologies) | 5%(nothing)
+
+  > * {
+    flex-basis: 40%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center; // since flex-direction is "column", then this is the way to align the items horizontally
+  }
+
+  > * > * {
+    margin: 1.2rem 0; // give margin top and bottom on every direct child of both sections
+  }
+
+  h2 {
+    color: white;
+    text-align: center;
+  }
+
+  .get-in-touch {
+    color: orange;
+
+    .email {
+      position: relative; // for the "copied" paragraph
+
+      input, button { // removing all auto styles on button and input to make them look normal
+        border: none;
+        font-family: inherit;
+        font-size: inherit;
+        padding: 0;
+        background-color: inherit;
+        color: inherit;
+
+        display: inline-block;
+        cursor: pointer; // although "input" is inside "button", cursor property needs to be applied to both. Just looks and feels better
+      }
+
+      input {
+        margin-left: 1em; //distance from the mail image
+        width: 16em !important; //just the right width to fit my email
+      }
+
+      button {
+        transition: box-shadow 1s;
+      }
+
+      button:hover {
+        box-shadow: 0 0.2em;
+      }
+
+      .fa-envelope {
+        font-size: 1.5rem !important;
+      }
+
+      p.copied { //"copied" text
+        opacity: 0;
+        position: absolute;
+        bottom: 0;
+        left: 20em; // goes past email icon and my email
+        transition: opacity 0.75s; //opacity is changed via JS code. And this transition applies over all changes to opacity, even if it happens via JS
+      }
+    }
+
+    $social-icon-size: 3rem;
+
+    .github, .linkedin {
+      position: relative;
+      height: $social-icon-size; //the containers and "i" elements will have the same size. So that layout is done nicely
+      width: $social-icon-size;
+    }
+
+    .fa-github, .fa-linkedin {
+      font-size: $social-icon-size !important;
+      transition: font-size 0.5s;
+    }
+
+    a {
+      // "i" is inside "a" (which is absolute), so it is not included in layout calculations (only the containers are).
+      // So when resizing, it will not push other elements away.
+      position: absolute;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    a:hover i {
+      font-size: $social-icon-size + 1rem !important;
+    }
+  }
+
+  .technologies {
+    background-color: black;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+
+    h2 {
+      grid-column: span 2;
+    }
+  }
+}
+
+$side-size: 6rem;
+
+#css-drawing, #html-drawing {
+  width: $side-size;
+  height: $side-size;
+  display: grid;
+  transition: grid-gap 0.5s;
+  grid-gap: 0;
+}
+
+#css-drawing:hover, #html-drawing:hover {
+  grid-gap: 3.5%;
+}
+
+#html-drawing {
+  grid-template-areas:
+          'o1 o1 o7 o7 o7 o7 o7 o7 o7 o6'
+          'o1 o1 o8 o8 o8 l1 l1 l1 l1 o6'
+          'o1 o1 w1 w1 w1 w1 w1 w1 l2 o6'
+          'o1 o1 w2 o9 o9 l3 l3 l3 l2 o6'
+          'o1 o1 w2 o9 o9 l3 l3 l3 l2 o6'
+          'o1 o1 w2 w3 w3 w3 w3 w3 l2 o6'
+          'o1 o1 o10 o10 o10 l4 l4 w4 l2 o6'
+          'o1 o1 w6 o11 o11 l4 l4 w4 l2 o6'
+          'o1 o1 w5 w5 w5 w5 w5 w4 l2 o6'
+          'o1 o1 o2 o2 o2 l6 l6 l6 l2 o6'
+          'o1 o1 o2 o2 o2 l6 l6 l6 o5 o5'
+          's1 s1 o2 o2 o2 l5 o4 o4 s4 s4'
+          's1 s1 s2 s2 o3 o3 s3 s3 s4 s4';
+
+  .orange {
+    background-color: rgb(228, 79, 38);
+  }
+
+  .light-orange {
+    background-color: rgb(241, 102, 42);
+  }
+
+  .white {
+    background-color: white;
+  }
+
+  @for $i from 1 through 11 {
+    .o#{$i} {
+      grid-area: o#{$i};
+    }
+  }
+
+  @for $i from 1 through 7 {
+    .l#{$i} {
+      grid-area: l#{$i};
+    }
+  }
+
+  @for $i from 1 through 6 {
+    .w#{$i} {
+      grid-area: w#{$i};
+    }
+  }
+
+  @for $i from 1 through 4 {
+    .s#{$i} {
+      grid-area: s#{$i};
+    }
+  }
+}
+
+#css-drawing{
+  grid-template-areas:
+          'b1 b1 b7 b7 b7 b7 b7 b7 b7 b6'
+          'b1 b1 b8 b8 b8 c1 c1 c1 c1 b6'
+          'b1 b1 w1 w1 w1 w1 w1 w1 c2 b6'
+          'b1 b1 b9 b10 b10 c6 c6 w2 c2 b6'
+          'b1 b1 b9 b10 b10 c6 c6 w2 c2 b6'
+          'b1 b1 b9 w3 w3 w3 w3 w2 c2 b6'
+          'b1 b1 b9 b11 b11 c5 c5 w2 c2 b6'
+          'b1 b1 w5 b11 b11 c5 c5 w2 c2 b6'
+          'b1 b1 w4 w4 w4 w4 w4 w2 c2 b6'
+          'b1 b1 b2 b2 b2 c3 c3 c3 c2 b6'
+          'b1 b1 b2 b2 b2 c3 c3 c3 b5 b5'
+          's1 s1 b2 b2 b2 c4 b4 b4 s4 s4'
+          's1 s1 s2 s2 b3 b3 s3 s3 s4 s4';
+
+  .blue {
+    background-color: #1572b6;
+  }
+
+  .cyan {
+    background-color: #33a9dc;
+  }
+
+  .white {
+    background-color: white;
+  }
+
+  .surrounding {
+    background-color: inherit;
+  }
+
+  @for $i from 1 through 11 {
+    .b#{$i} {
+      grid-area: b#{$i}
+    }
+  }
+
+  @for $i from 1 through 6 {
+    .c#{$i} {
+      grid-area: c#{$i}
+    }
+  }
+
+  @for $i from 1 through 5 {
+    .w#{$i} {
+      grid-area: w#{$i}
+    }
+  }
+
+  @for $i from 1 through 4 {
+    .s#{$i} {
+      grid-area: s#{$i}
+    }
+  }
+}
+
+.technology-img-container {
+  position: relative;
+  width: 5rem;
+  height: 5rem;
+
+  img {
+    position: absolute;
+    display: block;
+    width: 100%;
+
+    transition: transform 1s;
+  }
+
+  :hover {
+    transform: scale(1.35, 1.35);
+  }
+}
+
+
+
+
+
+
+

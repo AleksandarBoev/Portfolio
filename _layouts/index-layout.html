@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{page.title}}</title>
     <link rel="stylesheet" href="./css/common-styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
     <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
@@ -68,22 +69,6 @@
     </section>
 </main>
 
-<script>
-    const emailInput = document.getElementsByTagName('input')[0];
-    const button = document.getElementsByTagName('button')[0];
-    const copiedParagraph = document.querySelector('.email p');
-
-    button.addEventListener('click', () => {
-        emailInput.select();
-        document.execCommand('copy');
-        window.getSelection().removeAllRanges();
-        console.log(copiedParagraph.textContent);
-        copiedParagraph.style.opacity = '100%';
-
-        setTimeout(() => {
-            copiedParagraph.style.opacity = '0';
-        }, 1000);
-    });
-</script>
+{%- include footer.html -%}
 </body>
 </html>

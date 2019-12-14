@@ -1,3 +1,64 @@
-<footer>
 
+<footer>
+    <section class="get-in-touch">
+        <h2>Get in touch</h2>
+        <div class="email">
+            <button><i class="fa fa-envelope"></i><input value="{{site.email}}"/></button> <!--button is needed, because JS can't detect clicking on input properly-->
+            <p class="copied">Copied</p>
+        </div>
+        <div class="github">
+            <a target="_blank" href="{{site.github}}"><i class="fa fa-github"></i></a>
+        </div>
+        <div class="linkedin">
+            <a target="_blank" href="{{site.linkedin}}"><i class="fa fa-linkedin"></i></a>
+        </div>
+    </section>
+    <section class="technologies">
+        <h2 class="wat">Website Technologies</h2>
+        <section id="html-drawing">
+            {%- for i in (1..11) -%}
+            <div class="orange o{{i}}"></div>
+            {%- endfor -%}
+
+            {%- for i in (1..6) -%}
+            <div class="light-orange l{{i}}"></div>
+            {%- endfor -%}
+
+            {%- for i in (1..6) -%}
+            <div class="white w{{i}}"></div>
+            {%- endfor -%}
+
+            {%- for i in (1..10) -%}
+            <div class="surrounding s{{i}}"></div>
+            {%- endfor -%}
+        </section>
+        <section id="css-drawing">
+            {%- for i in (1..11) -%}
+            <div class="blue b{{i}}"></div>
+            {%- endfor -%}
+
+            {%- for i in (1..6) -%}
+            <div class="cyan c{{i}}"></div>
+            {%- endfor -%}
+
+            {%- for i in (1..5) -%}
+            <div class="white w{{i}}"></div>
+            {%- endfor -%}
+
+            {%- for i in (1..4) -%}
+            <div class="surrounding s{{i}}"></div>
+            {%- endfor -%}
+        </section>
+        <div class="technology-img-container">
+            <a target="_blank" href="https://sass-lang.com/">
+                <img src="https://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg">
+            </a>
+        </div>
+        <div class="technology-img-container">
+            <a target="_blank" href="https://jekyllrb.com/">
+                <img src="https://jekyllrb.com/img/logo-2x.png">
+            </a>
+        </div>
+    </section>
 </footer>
+<script src="./javascript/copy-email.js"></script>

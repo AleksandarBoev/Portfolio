@@ -7,9 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/common-styles.css">
     <link rel="stylesheet" href="./css/certificates.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
 </head>
 <body>
-{% include header.html %}
+{%- include header.html -%}
 
 <main class="certificates-page">
     <h1>{{page.header-title}}</h1>
@@ -29,6 +31,8 @@
     </div>
 
 </main>
+
+{%- include footer.html -%}
 
 <script>
     const certificatesElements = {
