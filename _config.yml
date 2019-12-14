@@ -25,7 +25,6 @@ author: 'Aleksandar Boev'
 email: 'aleksandarboev95@gmail.com'
 github: 'https://github.com/AleksandarBoev'
 linkedin: 'https://www.linkedin.com/in/aleksandar-boev-9a6345158/'
-testing: wat
 # Build settings
 destination: docs
 plugins:
