@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Projects</title><link rel="stylesheet" href="./css/common-styles.css">
-    <link rel="stylesheet" href="./css/projects.css"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <title>Validator</title>
+    <link rel="stylesheet" href="../css/common-styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="../css/single-project.css">
 </head>
-<body>
-
-<header><nav class="navbar">
+<body><header><nav class="navbar">
         <ul>
             <li>
                 <a class="" href="/portfolio/">About Me</a>
@@ -19,45 +19,24 @@
                 <a class="" href="/portfolio/certificates">Certificates</a>
             </li>
             <li>
-                <a class="selected" href="/portfolio/projects">Projects</a>
+                <a class="" href="/portfolio/projects">Projects</a>
             </li>
         </ul>
     </nav>
-</header>
-<main class="projects-page"><section>
-        <div class="img-container">
-            <img src="https://i.ibb.co/ctLY9zg/FaaS.png">
-        </div>
-        <div class="project-information">
-            <h2>Food as a Service</h2>
-            <p>Web application which serves as a platform for creating and managing restaurants and food products as well as purchasing the products.</p>
-        </div>
-        <div class="button-container">
-            <a href="/portfolio/projects/faas">Learn More</a>
-        </div>
-    </section><section>
-        <div class="img-container">
-            <img src="https://i.ibb.co/g7wm00Z/Currency-Converter.png">
-        </div>
-        <div class="project-information">
-            <h2>Currency Converter</h2>
-            <p>Using React for front-end and Java for back-end, as part of a team we developed a simple online currency converter.</p>
-        </div>
-        <div class="button-container">
-            <a href="/portfolio/projects/currency-converter">Learn More</a>
-        </div>
-    </section><section>
-        <div class="img-container">
-            <img src="https://i.ibb.co/bHGtqzy/Validator.png">
-        </div>
-        <div class="project-information">
-            <h2>Validator</h2>
-            <p>Application for validating the correct format and information of personal identification numbers and IBANs</p>
-        </div>
-        <div class="button-container">
-            <a href="/portfolio/projects/validator">Learn More</a>
-        </div>
-    </section></main>
+</header><main class="single-project-page">
+    <h1>Validator Application</h1>
+    <div class="slider"><img src="https://i.ibb.co/SfwkNHQ/home.png"><img src="https://i.ibb.co/sQ15tST/id-validation.png"><img src="https://i.ibb.co/C0qXnzH/iban-validation.png"><i class="fa fa-arrow-left"></i>
+        <i class="fa fa-arrow-right"></i>
+    </div>
+    <section>
+        <h2>About this project</h2><p>A team project for single day contest, organised by "Best Engineering Week", held in "UniCredit Bulbank". The purpose of the project - validating personal id numbers and IBAN numbers based format and content.</p><p>My part in the development of the project involved building the base application and creating a simple front-end, while the teammates focused on solving the core problem - the complex validation logic of both personal id and IBAN numbers.</p></section>
+    <section>
+        <h2>Technologies used</h2>
+        <ul><li>Java</li><li>Spring</li><li>Spring MVC</li><li>Spring Boot</li><li>HTML5</li><li>CSS3</li><li>Bootstrap 4</li><li>Thymeleaf</li></ul>
+    </section>
+    <section>
+        <h2>Resources</h2><a href="https://github.com/team-validators/BEW-Unicredit-Bulbank-Team-Project" target="_blank"><i class="fa fa-github"></i>https://github.com/team-validators/BEW-Unicredit-Bulbank-Team-Project</a></section>
+</main>
 <footer>
     <section class="get-in-touch">
         <h2>Get in touch</h2>
@@ -88,5 +67,41 @@
         </div>
     </section>
 </footer>
-<script src="./javascript/copy-email.js"></script></body>
+<script src="./javascript/copy-email.js"></script><script>
+    const images = document.querySelectorAll('.slider img');
+    images[0].classList.add('current-img');
+    let currentIndex = 0;
+
+    const leftArrow = document.getElementsByClassName('fa-arrow-left')[0];
+    const rightArrow = document.getElementsByClassName('fa-arrow-right')[0];
+
+    leftArrow.classList.add('hide-arrow');
+
+    leftArrow.addEventListener('click', () => {
+        images[currentIndex].classList.remove('current-img');
+        images[currentIndex].classList.add('right'); //pressing left arrow will send the old image to the right
+        currentIndex--;
+        images[currentIndex].classList.remove('right', 'left');
+        images[currentIndex].classList.add('current-img');
+
+        rightArrow.classList.remove('hide-arrow');
+        if (currentIndex === 0) {
+            leftArrow.classList.add('hide-arrow');
+        }
+    });
+
+    rightArrow.addEventListener('click', () => {
+        images[currentIndex].classList.remove('current-img');
+        images[currentIndex].classList.add('left'); //pressing right arrow will send the old image to the left
+        currentIndex++;
+        images[currentIndex].classList.remove('right', 'left');
+        images[currentIndex].classList.add('current-img');
+
+        leftArrow.classList.remove('hide-arrow');
+        if (currentIndex === images.length - 1) {
+            rightArrow.classList.add('hide-arrow');
+        }
+    });
+</script>
+</body>
 </html>

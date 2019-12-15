@@ -3,5 +3,9 @@
     --color-text-secondary: white;
     --color-orange: rgb(199, 44, 33);
 
-    --pixel-art-side-size: 15rem;
+
+    --main-color: rgb(38, 50, 56);
+    --main-color-darker: #343a40;
+    --secondary-color: rgb(255, 255, 255);
+    --secondary-color-darker: rgb(195, 206, 207);
 }

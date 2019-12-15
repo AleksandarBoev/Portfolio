@@ -4,24 +4,29 @@ title: FaaS
 header-title: Food as a Service
 permalink: /projects/faas
 projectDescriptionParagraphs:
-    - blablabla
-    - wooooo
+    - A solo developed web application, hosted for free on "Heroku" cloud, which serves as a platform for creating/viewing/editing/deleting user profiles, food products and restaurants as well as purchasing the products and viewing history of purchases.
+    - The functionalities a user can take advantage of depends on the users role. There are 4 roles in total - Anonymous (can only browse), User (has profile, can purchase products and view history of purchases), Manager (can create restaurants and products and edit/delete those, created by him), Admin (manages user roles). Roles and role privileges are achieved via sessions and filter-like classes (interceptors).
+    - Architecture pattern is MVC. Models are the BindingModel, ViewModel and code-first database classes. Controller part is made out of interceptors, service classes, repositories and controllers. Views are generated with the template engine "Thymeleaf"
 technologies:
     - Java
     - Spring
     - Spring Data
     - Spring MVC
+    - Spring Boot
     - PostgreSQL
     - HTML5
     - CSS3
     - Bootstrap 4
     - JavaScript
+    - Thymeleaf
 imageUrls:
-    - https://img1.looper.com/img/gallery/new-batman-theory-is-taking-the-internet-for-a-spin/intro-1573506972.jpg
-    - http://cdn3.whatculture.com/images/2019/10/ebb3d7e600c0a008-600x338.jpg
-    - https://static0.srcdn.com/wordpress/wp-content/uploads/2019/11/Batman-Alfred-Death-Preview.jpg
-    - https://gamespot1.cbsistatic.com/uploads/original/1582/15828986/3567683-batman%20hed.jpg
-    - https://ichef.bbci.co.uk/news/1024/branded_news/D778/production/_108906155_p07p1ndz.jpg
-webappLink: appstuff
-repositoryLink: gitstuff
+    - https://i.ibb.co/XbsvpkZ/product.png
+    - https://i.ibb.co/zQHsVzq/restaurants.png
+    - https://i.ibb.co/ynR4kZ6/editing-restaurant.png
+    - https://i.ibb.co/NCFmCdS/shopping-cart.png
+    - https://i.ibb.co/0rmTJjm/sales.png
+    - https://i.ibb.co/9VmLBQ4/admin.png
+    - https://i.ibb.co/d4WKTt7/faas-db.png
+webappLink: https://aleksandar-boev-faas.herokuapp.com/
+repositoryLink: https://github.com/AleksandarBoev/Food-as-a-Service
 ---
