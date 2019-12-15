@@ -1,13 +1,14 @@
 
 footer {
+  background-color: var(--main-color-darker);
+  color: var(--secondary-color-darker);
+
   margin-top: 3rem;
-  background-color: gray;
   display: flex;
   justify-content: space-around; // 5% (nothing) | 40% (get-in-touch) | 5%(nothing) | 5%(nothing) | 40% (technologies) | 5%(nothing)
 
   > * {
     flex-basis: 40%;
-    background-color: black;
     display: flex;
     flex-direction: column;
     align-items: center; // since flex-direction is "column", then this is the way to align the items horizontally
@@ -18,13 +19,11 @@ footer {
   }
 
   h2 {
-    color: white;
     text-align: center;
+    color: var(--secondary-color);
   }
 
   .get-in-touch {
-    color: orange;
-
     .email {
       position: relative; // for the "copied" paragraph
 
@@ -93,8 +92,6 @@ footer {
   }
 
   .technologies {
-    background-color: black;
-
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
@@ -240,7 +237,7 @@ $side-size: 6rem;
     display: block;
     width: 100%;
 
-    transition: transform 1s;
+    transition: transform 0.5s;
   }
 
   :hover {

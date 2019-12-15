@@ -1,6 +1,6 @@
 .navbar {
-  color: var(--color-text-secondary);
-  background-color: var(--color-background-secondary);
+  color: var(--secondary-color-darker);
+  background-color: var(--main-color);
   display: flex; }
   .navbar ul {
     flex-basis: 75%;
@@ -28,12 +28,13 @@
     color: inherit;
     transition: box-shadow 0.5s; }
   .navbar li:hover a {
-    box-shadow: 0 0.1em; }
+    box-shadow: 0 0.1em var(--secondary-color); }
   .navbar a.selected {
     animation-name: underscore;
     animation-duration: 0.5s;
     animation-delay: 0.75s;
-    animation-fill-mode: forwards; }
+    animation-fill-mode: forwards;
+    color: var(--secondary-color); }
 
 @keyframes appear {
   0% {
@@ -45,4 +46,4 @@
   0% {
     box-shadow: none; }
   100% {
-    box-shadow: 0 0.1em; } }
+    box-shadow: 0 0.1em var(--secondary-color); } }

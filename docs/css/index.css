@@ -16,9 +16,7 @@ img {
   padding-top: 2em;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  background-color: #323232;
-  color: #d2d2d2; }
+  align-items: center; }
   .about-me .about-me-image-container {
     margin: 0 auto;
     width: 8rem;
@@ -26,63 +24,6 @@ img {
     overflow: hidden; }
   .about-me p {
     max-width: 35em; }
-
-.about-me-social {
-  width: 100%;
-  display: grid;
-  grid-template-areas: 'heading heading' 'email email' 'github linkedin';
-  color: orange;
-  justify-content: center; }
-  .about-me-social > h2 {
-    grid-area: heading;
-    text-align: center; }
-  .about-me-social .email {
-    grid-area: email;
-    text-align: center;
-    position: relative; }
-    .about-me-social .email input, .about-me-social .email button {
-      border: none;
-      display: inline-block;
-      font-family: inherit;
-      font-size: inherit;
-      padding: 0;
-      width: auto !important;
-      background-color: inherit;
-      color: inherit;
-      cursor: pointer; }
-    .about-me-social .email input {
-      margin-left: 1em;
-      width: 16em !important; }
-    .about-me-social .email button {
-      transition: box-shadow 1s; }
-    .about-me-social .email button:hover {
-      box-shadow: 0 0.2em; }
-    .about-me-social .email i {
-      font-size: 1.5rem !important; }
-    .about-me-social .email p {
-      opacity: 0;
-      position: absolute;
-      bottom: 0;
-      left: 20em;
-      transition: opacity 0.75s; }
-  .about-me-social .github {
-    grid-area: github; }
-  .about-me-social .linkedin {
-    grid-area: linkedin; }
-  .about-me-social .github, .about-me-social .linkedin {
-    margin: 2rem;
-    position: relative;
-    height: var(--social-icon-size);
-    width: var(--social-icon-size); }
-  .about-me-social i {
-    font-size: var(--social-icon-size) !important;
-    transition: font-size 0.5s; }
-  .about-me-social a {
-    position: absolute;
-    text-decoration: none;
-    color: inherit; }
-  .about-me-social a:hover i {
-    font-size: calc(var(--social-icon-size) + 1rem) !important; }
 
 .education-section {
   display: flex;

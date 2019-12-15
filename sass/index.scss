@@ -22,9 +22,6 @@ img {
   flex-direction: column;
   align-items: center;
 
-  background-color: rgb(50, 50, 50); //TODO
-  color: rgb(210, 210, 210); //TODO
-
   .about-me-image-container {
     margin: 0 auto;
     width: 8rem;
@@ -34,97 +31,6 @@ img {
 
   p {
     max-width: 35em;
-  }
-}
-
-.about-me-social {
-  width: 100%;
-  display: grid;
-  grid-template-areas:
-          'heading heading'
-          'email email'
-          'github linkedin';
-  color: orange;
-  justify-content: center;
-
-  > h2 {
-    grid-area: heading;
-    text-align: center;
-  }
-
-  .email {
-    grid-area: email;
-    text-align: center;
-    position: relative;
-
-    input, button { // removing all auto styles on button and input to make them look normal
-      border: none;
-      display: inline-block;
-      font-family: inherit;
-      font-size: inherit;
-      padding: 0;
-      width: auto !important;
-      background-color: inherit;
-      color: inherit;
-      cursor: pointer;
-    }
-
-    input {
-      margin-left: 1em; //distance from the mail image
-      width: 16em !important;
-    }
-
-    button {
-      transition: box-shadow 1s;
-    }
-
-    button:hover {
-      box-shadow: 0 0.2em;
-    }
-
-    i {
-      font-size: 1.5rem !important;
-    }
-
-    p { //"copied" text
-      opacity: 0;
-      position: absolute;
-      bottom: 0;
-      left: 20em;
-      transition: opacity 0.75s; //opacity is changed via JS code. And this transition applies over all changes to opacity, even if it happens via JS
-    }
-  }
-
-  .github {
-    grid-area: github;
-  }
-
-  .linkedin {
-    grid-area: linkedin;
-  }
-
-  .github, .linkedin {
-    margin: 2rem;
-    position: relative;
-    height: var(--social-icon-size); //the containers and "i" elements will have the same size. So that layout is done nicely
-    width: var(--social-icon-size);
-  }
-
-  i {
-    font-size: var(--social-icon-size) !important;
-    transition: font-size 0.5s;
-  }
-
-  a {
-    // "i" is inside "a", so it is not included in layout calculations (only the containers are).
-    // So when resizing, it will not push other elements away.
-    position: absolute;
-    text-decoration: none;
-    color: inherit;
-  }
-
-  a:hover i {
-    font-size: calc(var(--social-icon-size) + 1rem) !important;
   }
 }
 

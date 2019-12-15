@@ -1,62 +1,59 @@
 footer {
+  background-color: var(--main-color-darker);
+  color: var(--secondary-color-darker);
   margin-top: 3rem;
-  background-color: gray;
   display: flex;
   justify-content: space-around; }
   footer > * {
     flex-basis: 40%;
-    background-color: black;
     display: flex;
     flex-direction: column;
     align-items: center; }
   footer > * > * {
     margin: 1.2rem 0; }
   footer h2 {
-    color: white;
-    text-align: center; }
-  footer .get-in-touch {
-    color: orange; }
-    footer .get-in-touch .email {
-      position: relative; }
-      footer .get-in-touch .email input, footer .get-in-touch .email button {
-        border: none;
-        font-family: inherit;
-        font-size: inherit;
-        padding: 0;
-        background-color: inherit;
-        color: inherit;
-        display: inline-block;
-        cursor: pointer; }
-      footer .get-in-touch .email input {
-        margin-left: 1em;
-        width: 16em !important; }
-      footer .get-in-touch .email button {
-        transition: box-shadow 1s; }
-      footer .get-in-touch .email button:hover {
-        box-shadow: 0 0.2em; }
-      footer .get-in-touch .email .fa-envelope {
-        font-size: 1.5rem !important; }
-      footer .get-in-touch .email p.copied {
-        opacity: 0;
-        position: absolute;
-        bottom: 0;
-        left: 20em;
-        transition: opacity 0.75s; }
-    footer .get-in-touch .github, footer .get-in-touch .linkedin {
-      position: relative;
-      height: 3rem;
-      width: 3rem; }
-    footer .get-in-touch .fa-github, footer .get-in-touch .fa-linkedin {
-      font-size: 3rem !important;
-      transition: font-size 0.5s; }
-    footer .get-in-touch a {
+    text-align: center;
+    color: var(--secondary-color); }
+  footer .get-in-touch .email {
+    position: relative; }
+    footer .get-in-touch .email input, footer .get-in-touch .email button {
+      border: none;
+      font-family: inherit;
+      font-size: inherit;
+      padding: 0;
+      background-color: inherit;
+      color: inherit;
+      display: inline-block;
+      cursor: pointer; }
+    footer .get-in-touch .email input {
+      margin-left: 1em;
+      width: 16em !important; }
+    footer .get-in-touch .email button {
+      transition: box-shadow 1s; }
+    footer .get-in-touch .email button:hover {
+      box-shadow: 0 0.2em; }
+    footer .get-in-touch .email .fa-envelope {
+      font-size: 1.5rem !important; }
+    footer .get-in-touch .email p.copied {
+      opacity: 0;
       position: absolute;
-      text-decoration: none;
-      color: inherit; }
-    footer .get-in-touch a:hover i {
-      font-size: 4rem !important; }
+      bottom: 0;
+      left: 20em;
+      transition: opacity 0.75s; }
+  footer .get-in-touch .github, footer .get-in-touch .linkedin {
+    position: relative;
+    height: 3rem;
+    width: 3rem; }
+  footer .get-in-touch .fa-github, footer .get-in-touch .fa-linkedin {
+    font-size: 3rem !important;
+    transition: font-size 0.5s; }
+  footer .get-in-touch a {
+    position: absolute;
+    text-decoration: none;
+    color: inherit; }
+  footer .get-in-touch a:hover i {
+    font-size: 4rem !important; }
   footer .technologies {
-    background-color: black;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
@@ -210,6 +207,6 @@ footer {
     position: absolute;
     display: block;
     width: 100%;
-    transition: transform 1s; }
+    transition: transform 0.5s; }
   .technology-img-container :hover {
     transform: scale(1.35, 1.35); }

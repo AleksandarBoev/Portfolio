@@ -9,3 +9,7 @@
     --secondary-color: rgb(255, 255, 255);
     --secondary-color-darker: rgb(195, 206, 207);
 }
+
+body {
+    background-color: var(--secondary-color);
+}

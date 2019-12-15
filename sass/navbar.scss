@@ -1,10 +1,10 @@
 .navbar {
   $appear-delay: 0.15s;
   $appear-duration: 0.5s;
-  $box-shadow-values: 0 0.1em;
+  $box-shadow-values: 0 0.1em var(--secondary-color);
 
-  color: var(--color-text-secondary);
-  background-color: var(--color-background-secondary);
+  color: var(--secondary-color-darker);
+  background-color: var(--main-color);
   display: flex;
 
   ul {
@@ -45,6 +45,7 @@
     animation-duration: $appear-duration;
     animation-delay: $appear-delay * 5; // add the underscore after all "li" elements have appeared
     animation-fill-mode: forwards;
+    color: var(--secondary-color);
   }
 
   @keyframes appear {

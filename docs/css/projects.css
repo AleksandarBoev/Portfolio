@@ -46,8 +46,8 @@
     display: inline-block;
     padding: 0.5em;
     border-radius: 0.25em;
-    color: white;
-    background-color: green;
+    color: var(--secondary-color-darker);
+    background-color: var(--main-color);
     text-decoration: none;
     position: absolute;
     /* will always be on the bottom right no matter the height of the boxes */
@@ -55,8 +55,8 @@
     right: 5%;
     transition: color 0.5s, background-color 0.5s; }
   .projects-page a:hover {
-    background-color: lightgreen;
-    color: black; }
+    background-color: var(--main-color-darker);
+    color: var(--secondary-color); }
   .projects-page .button-container {
     /* only job is to stretch the section, so that there is room for the button*/
     height: 4em; }
