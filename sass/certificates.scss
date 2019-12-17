@@ -1,5 +1,3 @@
-
-
 .certificates-page {
   $hover-background: rgb(150, 150, 150);
   $selected-background: rgb(200, 200, 200);
@@ -9,12 +7,12 @@
   width: 80%;
   margin: 0 auto;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
+  flex-wrap: wrap; // for the h1 so that the other elements go to a new row.
 
   h1 {
+    flex-basis: 100%; //take up entire flex row
     text-align: center;
-    flex-basis: 100%;
   }
 
   .img-container {
@@ -33,14 +31,12 @@
     transition: opacity $img-effect-duration + (0.25 * $img-effect-duration), transform $img-effect-duration + (0.25 * $img-effect-duration); //time it takes to fade out, a.k.a. when loosing "effect" class
     opacity: 0; // all images are initially invisible. Only the one with "effect" class will be seen
     transform: translateX(-100%); // all images initially are their own width to the left
-    z-index: -1; // all images initially are behind all other elements
   }
 
   .effect {
     opacity: 1; // appear
     transform: translateX(0); // go to your original position - inside the container
     transition: opacity $img-effect-duration $img-effect-duration, transform $img-effect-duration $img-effect-duration; //time it takes to appear, a.k.a. when getting "effect" class, and how much to wait before activating appear animation
-    z-index: 1; // puts the image in front
   }
 
   .certificates-aside {

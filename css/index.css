@@ -8,6 +8,9 @@
   --timeline-line-width: 0.3em;
   --timeline-distance-to-line: 3%; }
 
+.index-main > * {
+  margin-bottom: 5rem; }
+
 img {
   display: block;
   width: 100%; }
@@ -22,6 +25,8 @@ img {
     width: 8rem;
     border-radius: 50%;
     overflow: hidden; }
+  .about-me h1 {
+    text-align: center; }
   .about-me p {
     max-width: 35em; }
 
@@ -29,7 +34,10 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center; }
-  .education-section > * {
+  .education-section h2 {
+    text-align: center;
+    margin: 0; }
+  .education-section > section {
     margin-top: 3em; }
   .education-section .education-softuni {
     background-image: url(../images/softuni-me.jpg); }
@@ -127,7 +135,8 @@ img {
     flex-basis: calc(100% - var(--timeline-line-position) - var(--timeline-distance-to-line));
     /* on the right of the line */ }
   .timeline h2 {
-    text-align: center; }
+    text-align: center;
+    margin-bottom: 1.2em; }
   .timeline h3 {
     margin-top: 0;
     margin-bottom: 1em; }

@@ -1,0 +1,155 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black; }
+
+button {
+  font-size: 20px; }
+
+.no-opacity {
+  opacity: 0;
+  transition-property: opacity;
+  transition-delay: 2s; }
+
+section.remove-grid {
+  grid-gap: 0;
+  transition-property: grid-gap;
+  transition-delay: 4.2s;
+  transition-duration: 1s; }
+
+.html-drawing {
+  width: 300px;
+  height: 300px;
+  display: grid;
+  transition-property: grid-gap;
+  transition-duration: 1s;
+  transition-delay: 0s;
+  grid-gap: 3.5%;
+  margin: 2em 0;
+  grid-template-areas: 'o1 o1 o7 o7 o7 o7 o7 o7 o7 o6' 'o1 o1 o8 o8 o8 l1 l1 l1 l1 o6' 'o1 o1 w1 w1 w1 w1 w1 w1 l2 o6' 'o1 o1 w2 o9 o9 l3 l3 l3 l2 o6' 'o1 o1 w2 o9 o9 l3 l3 l3 l2 o6' 'o1 o1 w2 w3 w3 w3 w3 w3 l2 o6' 'o1 o1 o10 o10 o10 l4 l4 w4 l2 o6' 'o1 o1 w6 o11 o11 l4 l4 w4 l2 o6' 'o1 o1 w5 w5 w5 w5 w5 w4 l2 o6' 'o1 o1 o2 o2 o2 l6 l6 l6 l2 o6' 'o1 o1 o2 o2 o2 l6 l6 l6 o5 o5' 's1 s1 o2 o2 o2 l5 o4 o4 s4 s4' 's1 s1 s2 s2 o3 o3 s3 s3 s4 s4'; }
+
+.orange {
+  background-color: #e44f26; }
+
+.light-orange {
+  background-color: #f1662a; }
+
+.white {
+  background-color: white; }
+
+div {
+  transition-property: opacity;
+  transition-duration: 1s; }
+
+.o1 {
+  grid-area: o1;
+  transition-delay: 0.15s; }
+
+.o2 {
+  grid-area: o2;
+  transition-delay: 0.3s; }
+
+.o3 {
+  grid-area: o3;
+  transition-delay: 0.45s; }
+
+.o4 {
+  grid-area: o4;
+  transition-delay: 0.6s; }
+
+.o5 {
+  grid-area: o5;
+  transition-delay: 0.75s; }
+
+.o6 {
+  grid-area: o6;
+  transition-delay: 0.9s; }
+
+.o7 {
+  grid-area: o7;
+  transition-delay: 1.05s; }
+
+.o8 {
+  grid-area: o8;
+  transition-delay: 1.2s; }
+
+.o9 {
+  grid-area: o9;
+  transition-delay: 1.35s; }
+
+.o10 {
+  grid-area: o10;
+  transition-delay: 1.5s; }
+
+.o11 {
+  grid-area: o11;
+  transition-delay: 1.65s; }
+
+.l1 {
+  grid-area: l1;
+  transition-delay: 1.8s; }
+
+.l2 {
+  grid-area: l2;
+  transition-delay: 1.95s; }
+
+.l3 {
+  grid-area: l3;
+  transition-delay: 2.1s; }
+
+.l4 {
+  grid-area: l4;
+  transition-delay: 2.25s; }
+
+.l5 {
+  grid-area: l5;
+  transition-delay: 2.4s; }
+
+.l6 {
+  grid-area: l6;
+  transition-delay: 2.55s; }
+
+.l7 {
+  grid-area: l7;
+  transition-delay: 2.7s; }
+
+.w1 {
+  grid-area: w1;
+  transition-delay: 2.85s; }
+
+.w2 {
+  grid-area: w2;
+  transition-delay: 3s; }
+
+.w3 {
+  grid-area: w3;
+  transition-delay: 3.15s; }
+
+.w4 {
+  grid-area: w4;
+  transition-delay: 3.3s; }
+
+.w5 {
+  grid-area: w5;
+  transition-delay: 3.45s; }
+
+.w6 {
+  grid-area: w6;
+  transition-delay: 3.6s; }
+
+.s1 {
+  grid-area: s1;
+  transition-delay: 3.75s; }
+
+.s2 {
+  grid-area: s2;
+  transition-delay: 3.9s; }
+
+.s3 {
+  grid-area: s3;
+  transition-delay: 4.05s; }
+
+.s4 {
+  grid-area: s4;
+  transition-delay: 4.2s; }
