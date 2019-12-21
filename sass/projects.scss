@@ -50,12 +50,35 @@
     background-color: white;
   }
 
-  section {
+  $appear-delay: 0.5s;
+  $appear-duration: 0.90s;
+
+  .project {
     box-shadow: 0 0 10px 5px;
     overflow: hidden;
     border-radius: 0.5em;
     background-color: rgb(238, 238, 238);
     position: relative; /* button with "absolute" can be positioned */
+
+    opacity: 0;
+    animation: project-appear;
+    animation-duration: $appear-duration;
+    animation-fill-mode: forwards; // effects of animation stay (opacity stays at 100%)
+  }
+
+  @keyframes project-appear {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 100%;
+    }
+  }
+
+  @for $i from 1 through 3 {
+    .project:nth-of-type(#{$i}) {
+      animation-delay: $appear-delay * $i;
+    }
   }
 
   h2 {

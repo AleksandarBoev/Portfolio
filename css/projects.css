@@ -31,13 +31,29 @@
     box-shadow: 0 5px;
     z-index: 1;
     background-color: white; }
-  .projects-page section {
+  .projects-page .project {
     box-shadow: 0 0 10px 5px;
     overflow: hidden;
     border-radius: 0.5em;
     background-color: #eeeeee;
     position: relative;
-    /* button with "absolute" can be positioned */ }
+    /* button with "absolute" can be positioned */
+    opacity: 0;
+    animation: project-appear;
+    animation-duration: 0.9s;
+    animation-fill-mode: forwards; }
+
+@keyframes project-appear {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 100%; } }
+  .projects-page .project:nth-of-type(1) {
+    animation-delay: 0.5s; }
+  .projects-page .project:nth-of-type(2) {
+    animation-delay: 1s; }
+  .projects-page .project:nth-of-type(3) {
+    animation-delay: 1.5s; }
   .projects-page h2 {
     padding: 1rem; }
   .projects-page p {
