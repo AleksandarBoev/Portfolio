@@ -55,20 +55,21 @@ footer {
     font-size: 4rem !important; }
   footer .technologies {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     justify-items: center;
     align-items: center; }
     footer .technologies h2 {
-      grid-column: span 2; }
+      grid-column: span 6; }
 
-#css-drawing, #html-drawing {
+#css-drawing, #html-drawing, #js-drawing {
   width: 6rem;
   height: 6rem;
   display: grid;
   transition: grid-gap 0.5s;
-  grid-gap: 0; }
+  grid-gap: 0;
+  grid-column: span 2; }
 
-#css-drawing:hover, #html-drawing:hover {
+#css-drawing:hover, #html-drawing:hover, #js-drawing:hover {
   grid-gap: 3.5%; }
 
 #html-drawing {
@@ -199,10 +200,74 @@ footer {
   #css-drawing .s4 {
     grid-area: s4; }
 
+#js-drawing {
+  grid-template-areas: 'o1 o1 o1 o9 o9 o9 o9 o9 o9 o8' 'o1 o1 o1 o10 o10 y1 y1 y1 y1 o8' 'o1 o1 o1 w1 o5 y2 w3 w3 w3 o8' 'o1 o1 o1 w1 o5 y2 w4 y3 y3 o8' 'o1 o1 o1 w1 o5 y2 w4 y3 y3 o8' 'o1 o1 o1 w1 o5 y2 w4 y3 y3 o8' 'o1 o1 o1 w1 o5 y2 w4 w5 w5 o8' 'o1 o1 o1 w1 o5 y2 y4 y4 w6 o8' 'o1 o1 o1 w1 o5 y2 y4 y4 w6 o8' 'o2 w2 w2 w1 o5 y2 w7 w7 w6 o8' 'o3 o3 o3 o3 o3 y2 y5 y5 y5 o8' 'o3 o3 o3 o3 o3 y2 y5 y5 y5 o8' 's1 s1 o4 o4 o4 y2 o7 o7 s4 s4' 's1 s1 s2 s2 o6 o6 s3 s3 s4 s4'; }
+  #js-drawing .orange {
+    background-color: #e9ca32; }
+  #js-drawing .yellow {
+    background-color: #ffde25; }
+  #js-drawing .white {
+    background-color: white; }
+  #js-drawing .surrounding {
+    background-color: inherit; }
+  #js-drawing .o1 {
+    grid-area: o1; }
+  #js-drawing .o2 {
+    grid-area: o2; }
+  #js-drawing .o3 {
+    grid-area: o3; }
+  #js-drawing .o4 {
+    grid-area: o4; }
+  #js-drawing .o5 {
+    grid-area: o5; }
+  #js-drawing .o6 {
+    grid-area: o6; }
+  #js-drawing .o7 {
+    grid-area: o7; }
+  #js-drawing .o8 {
+    grid-area: o8; }
+  #js-drawing .o9 {
+    grid-area: o9; }
+  #js-drawing .o10 {
+    grid-area: o10; }
+  #js-drawing .y1 {
+    grid-area: y1; }
+  #js-drawing .y2 {
+    grid-area: y2; }
+  #js-drawing .y3 {
+    grid-area: y3; }
+  #js-drawing .y4 {
+    grid-area: y4; }
+  #js-drawing .y5 {
+    grid-area: y5; }
+  #js-drawing .w1 {
+    grid-area: w1; }
+  #js-drawing .w2 {
+    grid-area: w2; }
+  #js-drawing .w3 {
+    grid-area: w3; }
+  #js-drawing .w4 {
+    grid-area: w4; }
+  #js-drawing .w5 {
+    grid-area: w5; }
+  #js-drawing .w6 {
+    grid-area: w6; }
+  #js-drawing .w7 {
+    grid-area: w7; }
+  #js-drawing .s1 {
+    grid-area: s1; }
+  #js-drawing .s2 {
+    grid-area: s2; }
+  #js-drawing .s3 {
+    grid-area: s3; }
+  #js-drawing .s4 {
+    grid-area: s4; }
+
 .technology-img-container {
   position: relative;
   width: 5rem;
-  height: 5rem; }
+  height: 5rem;
+  grid-column: span 3; }
   .technology-img-container img {
     position: absolute;
     display: block;
