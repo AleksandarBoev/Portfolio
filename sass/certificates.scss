@@ -1,6 +1,6 @@
 @media (max-width: 480px) {
   .certificates-page {
-    width: 90%;
+    width: 85%;
 
     $main-view-height: 50vh;
 
@@ -13,7 +13,7 @@
     .certificates-aside {
       flex-basis: 100%;
       height: $main-view-height - 18vh;
-      margin-bottom: 2rem;
+      margin-bottom: 4rem;
     }
   }
 }
