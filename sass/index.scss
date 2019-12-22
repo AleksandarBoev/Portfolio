@@ -1,14 +1,61 @@
+@media (max-width: 480px) {
+  .about-me {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  $education-box-width: 13rem;
+  $education-box-height: $education-box-width - 4rem;
+  $education-section-width: $education-box-width * 2; //twice the width of the education box
+
+  .education-section {
+    > section {
+      width: $education-section-width;
+    }
+
+    .education-box {
+      width: $education-box-width;
+      height: $education-box-height;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+    }
+  }
+
+  .timeline {
+    width: 90%;
+  }
+}
+
+@media (min-width: 480px) {
+  $education-box-width: 25rem;
+  $education-box-height: $education-box-width - 10rem;
+  $education-section-width: $education-box-width * 2; //twice the width of the education box
+
+  .education-section {
+    > section {
+      width: $education-section-width;
+    }
+
+    .education-box {
+      width: $education-box-width;
+      height: $education-box-height;
+    }
+  }
+
+  .timeline {
+    width: 75%;
+  }
+}
+
 :root {
   --social-icon-size: 3rem;
 
-  --education-box-width: 25rem;
-  --education-box-height: calc(var(--education-box-width) - 10rem);
-  --education-section-width: calc(var(--education-box-width) * 2); //twice the width of the education box
   --education-box-slide-time: 0.5s;
-
   --timeline-line-position: 30%;
   --timeline-line-width: 0.3em;
-  --timeline-distance-to-line: 3%;
+  --timeline-distance-to-line: 7%;
 }
 
 
@@ -66,8 +113,6 @@ img {
   }
 
   .education-box {
-    width: var(--education-box-width);
-    height: var(--education-box-height);
     display: inline-block;
     position: relative; //for the absolute position of ":before" and "h2"
     background-size: cover;
@@ -98,7 +143,6 @@ img {
   }
 
   > section {
-    width: var(--education-section-width);
     text-align: center; //center the ".education-box"
     position: relative; //for the paragraph information about education
   }
@@ -125,7 +169,7 @@ img {
 
 .timeline {
   margin: 0 auto;
-  width: 75%;
+
 
   /* line container */
   .timeline-container {

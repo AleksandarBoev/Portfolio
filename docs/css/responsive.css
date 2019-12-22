@@ -3,7 +3,7 @@ Typical screen widths to support: 1600px, 1024px, 960px, 768px, 640px, 480px, 32
  */
 @media (max-width: 479px) {
     html {
-        font-size: 6px;
+        font-size: 12px;
     }
 }
 

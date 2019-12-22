@@ -1,12 +1,32 @@
+@media (max-width: 480px) {
+  .about-me {
+    width: 90%;
+    margin: 0 auto; }
+  .education-section > section {
+    width: 26rem; }
+  .education-section .education-box {
+    width: 13rem;
+    height: 9rem; }
+  .education-section h3 {
+    font-size: 1.1rem; }
+  .timeline {
+    width: 90%; } }
+
+@media (min-width: 480px) {
+  .education-section > section {
+    width: 50rem; }
+  .education-section .education-box {
+    width: 25rem;
+    height: 15rem; }
+  .timeline {
+    width: 75%; } }
+
 :root {
   --social-icon-size: 3rem;
-  --education-box-width: 25rem;
-  --education-box-height: calc(var(--education-box-width) - 10rem);
-  --education-section-width: calc(var(--education-box-width) * 2);
   --education-box-slide-time: 0.5s;
   --timeline-line-position: 30%;
   --timeline-line-width: 0.3em;
-  --timeline-distance-to-line: 3%; }
+  --timeline-distance-to-line: 7%; }
 
 .index-main > * {
   margin-bottom: 5rem; }
@@ -44,8 +64,6 @@ img {
   .education-section .education-tu {
     background-image: url(../images/tu.jpg); }
   .education-section .education-box {
-    width: var(--education-box-width);
-    height: var(--education-box-height);
     display: inline-block;
     position: relative;
     background-size: cover;
@@ -68,7 +86,6 @@ img {
     background-color: rgba(0, 0, 0, 0.4);
     width: 80%; }
   .education-section > section {
-    width: var(--education-section-width);
     text-align: center;
     position: relative; }
   .education-section > section:hover div {
@@ -88,7 +105,6 @@ img {
 
 .timeline {
   margin: 0 auto;
-  width: 75%;
   /* line container */
   /* line */
   /* has only 2 things in it. And there will be room between them */
