@@ -1,5 +1,12 @@
+@media (max-width: 1024px) {
+  .single-project-page {
+    width: 80%; } }
+
+@media (min-width: 1024px) {
+  .single-project-page {
+    width: 45rem; } }
+
 .single-project-page {
-  width: 45rem;
   margin: 3rem auto; }
   .single-project-page h1 {
     text-align: center;
@@ -25,9 +32,11 @@
     margin-bottom: 1.5em; }
 
 .slider {
+  height: 0;
+  padding-top: 30%;
+  padding-bottom: 30%;
   position: relative;
   /* for the absolute images inside */
-  height: 28rem;
   background-color: white;
   /* if an image does not fill the height, this color is seen */
   margin: 0 auto;

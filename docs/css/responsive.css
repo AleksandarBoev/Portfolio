@@ -1,7 +1,7 @@
 /*
 Typical screen widths to support: 1600px, 1024px, 960px, 768px, 640px, 480px, 320px.
  */
-@media (max-width: 479px) {
+@media (max-width: 480px) {
     html {
         font-size: 12px;
     }
@@ -9,19 +9,19 @@ Typical screen widths to support: 1600px, 1024px, 960px, 768px, 640px, 480px, 32
 
 @media (min-width: 480px) {
     html {
-        font-size: 9px;
+        font-size: 13px;
     }
 }
 
 @media (min-width: 640px) {
     html {
-        font-size: 12px;
+        font-size: 14px;
     }
 }
 
 @media (min-width: 768px) {
     html {
-        font-size: 13px;
+        font-size: 15px;
     }
 }
 

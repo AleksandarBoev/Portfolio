@@ -1,10 +1,46 @@
+@media (max-width: 480px) {
+  .certificates-page {
+    width: 90%;
+
+    $main-view-height: 50vh;
+
+    .img-container {
+      flex-basis: 100%;
+      width: 100%;
+      height: $main-view-height;
+    }
+
+    .certificates-aside {
+      flex-basis: 100%;
+      height: $main-view-height - 18vh;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+@media (min-width: 480px) {
+  .certificates-page {
+    width: 80%;
+
+    $main-view-height: 80vh;
+
+    .img-container {
+      flex-basis: 60%;
+      height: $main-view-height;
+    }
+
+    .certificates-aside {
+      flex-basis: 30%;
+      height: $main-view-height;
+    }
+  }
+}
+
 .certificates-page {
   $hover-background: rgb(150, 150, 150);
   $selected-background: rgb(200, 200, 200);
   $img-effect-duration: 0.65s;
-  $main-view-height: 80vh;
 
-  width: 80%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -17,8 +53,6 @@
 
   .img-container {
     display: inline-block;
-    flex-basis: 60%;
-    height: $main-view-height;
     overflow: auto; // do not allow the image inside to be visible outside the container when it gets moved with "translate". Also add scroll if img height is cropped
     position: relative; // img absolute position will position itself inside nearest relative positioned element
   }
@@ -40,10 +74,8 @@
   }
 
   .certificates-aside {
-    flex-basis: 30%;
     background-color: rgb(230, 230, 230);
     padding: 0.5rem;
-    height: $main-view-height;
     overflow: auto;
 
     h2 {

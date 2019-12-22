@@ -1,12 +1,8 @@
-@media (min-width: 480px) {
+@media (min-width: 480px) { //bigger than phones
   footer {
     display: flex;
     justify-content: space-around; // 5% (nothing) | 40% (get-in-touch) | 5%(nothing) | 5%(nothing) | 40% (technologies) | 5%(nothing)
     //under 480px (phones) the "Get in touch" and "Website Technologies" sections will be vertically positioned
-  }
-
-  > * {
-    flex-basis: 40%;
   }
 }
 
@@ -112,7 +108,7 @@ footer {
   }
 }
 
-$side-size: 6rem;
+$side-size: 5rem;
 
 #css-drawing, #html-drawing, #js-drawing {
   width: $side-size;

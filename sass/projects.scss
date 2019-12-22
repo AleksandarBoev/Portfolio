@@ -1,14 +1,10 @@
-@media (min-width: 320px) {
+@media (max-width: 1024px) {
   .projects-page {
-    width: 70%;
+    width: 85%;
   }
 
   .projects-page > * {
     flex-basis: 100%;
-  }
-
-  .img-container {
-    height: 18em;
   }
 }
 
@@ -22,7 +18,8 @@
   }
 
   .img-container {
-    height: 14em;
+    height: 0;
+    padding-bottom: 50%;
   }
 }
 
@@ -50,8 +47,8 @@
     background-color: white;
   }
 
-  $appear-delay: 0.5s;
-  $appear-duration: 0.90s;
+  $appear-delay: 0.35s;
+  $appear-duration: 0.60s;
 
   .project {
     box-shadow: 0 0 10px 5px;
