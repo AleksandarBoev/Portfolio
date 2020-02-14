@@ -110,6 +110,11 @@ footer {
 
 $side-size: 5rem;
 
+.drawing-anchor {
+  display: grid;
+  grid-column: span 2;
+}
+
 #css-drawing, #html-drawing, #js-drawing {
   width: $side-size;
   height: $side-size;

@@ -1,5 +1,15 @@
 [
   {
+    "date": "05.02.2020",
+    "title": "Algorithms",
+    "description": "Software University course about sorting, searching, combinatorial, greedy and graph algorithms and techniques like recursion and dynamic programming."
+  },
+  {
+    "date": "20.12.2019",
+    "title": "Data Structures",
+    "description": "Course in Software University covering material like linear, tree and associative arrays data structures as well as calculating algorithm complexity for different operations."
+  },
+  {
     "date": "16.09.2019",
     "title": "Front-End",
     "description": "Software University module about front-end development with two courses: <strong>HTML & CSS</strong> and <strong>CSS Advanced</strong>. Ends with a project defense on 15.12.2019"

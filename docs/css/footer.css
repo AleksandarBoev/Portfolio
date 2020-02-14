@@ -63,6 +63,10 @@ footer {
     footer .technologies h2 {
       grid-column: span 6; }
 
+.drawing-anchor {
+  display: grid;
+  grid-column: span 2; }
+
 #css-drawing, #html-drawing, #js-drawing {
   width: 5rem;
   height: 5rem;
